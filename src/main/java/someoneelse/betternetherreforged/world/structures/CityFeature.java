@@ -2,6 +2,13 @@ package someoneelse.betternetherreforged.world.structures;
 
 import java.util.List;
 
+<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/world/structures/CityFeature.java
+=======
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import someoneelse.betternetherreforged.BetterNether;
+>>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/world/structures/CityFeature.java
 import someoneelse.betternetherreforged.world.structures.city.CityGenerator;
 import someoneelse.betternetherreforged.world.structures.piece.CavePiece;
 import someoneelse.betternetherreforged.world.structures.piece.CityPiece;
@@ -20,6 +27,8 @@ import someoneelse.betternetherreforged.world.structures.city.palette.Palettes;
 
 
 public class CityFeature extends Structure<NoFeatureConfig> {
+
+
 	private static CityGenerator generator;
 	public static final int RADIUS = 8 * 8;
 
@@ -40,6 +49,7 @@ public class CityFeature extends Structure<NoFeatureConfig> {
 		public CityStart(Structure<NoFeatureConfig> structureFeature, int chunkX, int chunkZ, MutableBoundingBox blockBox, int i, long l) {
 			super(structureFeature, chunkX, chunkZ, blockBox, i, l);
 		}
+
 
 		@Override
 		public void func_230364_a_(DynamicRegistries dynamicRegistryManager, ChunkGenerator chunkGenerator, TemplateManager structureManager, int x, int z, Biome biome, NoFeatureConfig featureConfig) {

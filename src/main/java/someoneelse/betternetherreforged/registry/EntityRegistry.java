@@ -22,6 +22,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
+<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/registry/EntityRegistry.java
 import someoneelse.betternetherreforged.entity.EntityChair;
 import someoneelse.betternetherreforged.entity.EntityFlyingPig;
 import someoneelse.betternetherreforged.entity.EntityHydrogenJellyfish;
@@ -29,6 +30,9 @@ import someoneelse.betternetherreforged.entity.EntityJungleSkeleton;
 import someoneelse.betternetherreforged.entity.EntityNaga;
 import someoneelse.betternetherreforged.entity.EntityNagaProjectile;
 import someoneelse.betternetherreforged.entity.EntitySkull;
+=======
+import someoneelse.betternetherreforged.entity.*;
+>>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/registry/EntityRegistry.java
 
 public class EntityRegistry {
 	public static final Map<EntityType<? extends LivingEntity>, AttributeModifierMap> ATTRIBUTES = Maps.newHashMap();
@@ -59,9 +63,8 @@ public class EntityRegistry {
 		.setShouldReceiveVelocityUpdates(true)
 		.build("");
 	
-	/*
-	 * Firefly's renderer doesn't register properly
-	 * 
+
+
 	public static final EntityType<EntityFirefly> FIREFLY = //registerEntity("firefly", EntityTypeBuilder.create(EntityClassification.AMBIENT, EntityFirefly::new).size(EntitySize.fixed(0.5F, 0.5F)).fireImmune().build(), EntityFirefly.getAttributeContainer());
 	EntityType.Builder
 		.<EntityFirefly>create(EntityFirefly::new, EntityClassification.AMBIENT)
@@ -71,7 +74,7 @@ public class EntityRegistry {
 		.immuneToFire()
 		.setShouldReceiveVelocityUpdates(true)
 		.build("");
-		*/
+
 	
 	public static final EntityType<EntityHydrogenJellyfish> HYDROGEN_JELLYFISH = //registerEntity("hydrogen_jellyfish", EntityTypeBuilder.create(EntityClassification.AMBIENT, EntityHydrogenJellyfish::new).size(EntitySize.flexible(2F, 5F)).fireImmune().build(), EntityHydrogenJellyfish.getAttributeContainer());
 	EntityType.Builder
@@ -127,7 +130,7 @@ public class EntityRegistry {
 		IForgeRegistry<EntityType<?>> r = evt.getRegistry();
 		r.register(CHAIR.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "chair")));
 		r.register(NAGA_PROJECTILE.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "naga_projectile")));
-		//r.register(FIREFLY.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "firefly")));
+		r.register(FIREFLY.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "firefly")));
 		r.register(NAGA.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "naga")));
 		r.register(FLYING_PIG.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "flying_pig")));
 		r.register(JUNGLE_SKELETON.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "jungle_skeleton")));
@@ -147,7 +150,7 @@ public class EntityRegistry {
 	public static void registerEntityAttributes() {
 		GlobalEntityTypeAttributes.put(CHAIR, EntityChair.getAttributeContainer());
 		GlobalEntityTypeAttributes.put(NAGA_PROJECTILE, MobEntity.func_233666_p_().create());
-		//GlobalEntityTypeAttributes.put(FIREFLY, EntityFirefly.getAttributeContainer());
+		GlobalEntityTypeAttributes.put(FIREFLY, EntityFirefly.getAttributeContainer());
 		GlobalEntityTypeAttributes.put(NAGA, EntityNaga.getAttributeContainer());
 		GlobalEntityTypeAttributes.put(FLYING_PIG, EntityFlyingPig.getAttributeContainer());
 		GlobalEntityTypeAttributes.put(JUNGLE_SKELETON, AbstractSkeletonEntity.registerAttributes().create());
@@ -170,6 +173,8 @@ public class EntityRegistry {
 		NETHER_ENTITIES.add(FLYING_PIG);
 		NETHER_ENTITIES.add(HYDROGEN_JELLYFISH);
 		NETHER_ENTITIES.add(SKULL);
+		NETHER_ENTITIES.add(FIREFLY);
+		NETHER_ENTITIES.add(JUNGLE_SKELETON);
 	}
 
 	public static <T extends LivingEntity> EntityType<T> registerEntity(String name, EntityType<T> entity) {

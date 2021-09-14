@@ -1,9 +1,17 @@
 package someoneelse.betternetherreforged.registry;
 
+import java.sql.Struct;
 import java.util.Map;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 
+<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/registry/StructureRegistry.java
+=======
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.gen.feature.StructureFeature;
+import net.minecraftforge.event.RegistryEvent;
+>>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/registry/StructureRegistry.java
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.config.Configs;
 import someoneelse.betternetherreforged.structures.IStructure;
@@ -27,16 +35,20 @@ import someoneelse.betternetherreforged.structures.plants.*;
 public class StructureRegistry {
 	private static final Map<StructureType, Map<String, IStructure>> REGISTRY;
 
-	
+
+
+
+
 	private static final int cityDistance = Configs.GENERATOR.getInt("generator.world.cities", "distance", 64);
 	private static final int citySeparation = cityDistance >> 1;
 	
 	public static final DeferredRegister<Structure<?>> DEFERRED_STRUCTURES = DeferredRegister.create(ForgeRegistries.STRUCTURE_FEATURES, BetterNether.MOD_ID);
 	public static final DeferredRegister<Feature<?>> DEFERRED_FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, BetterNether.MOD_ID);
 	
-	public static final Structure<NoFeatureConfig> NETHER_CITY = registerStructure("bncity", new CityFeature(), GenerationStage.Decoration.RAW_GENERATION, new StructureSeparationSettings(cityDistance, citySeparation, 1234));
+	public static final Structure<NoFeatureConfig> NETHER_CITY = registerStructure("nether_city", new CityFeature(), GenerationStage.Decoration.RAW_GENERATION, new StructureSeparationSettings(cityDistance, citySeparation, 1234));
 
 	public static <S extends Structure<NoFeatureConfig>> S registerStructure(String name, S structure, GenerationStage.Decoration stage, StructureSeparationSettings separation) {
+
 		RegistryObject<S> entry = DEFERRED_STRUCTURES.register(name, () -> structure);
 		S struct = entry.get();
 		Structure.NAME_STRUCTURE_BIMAP.put(name, struct);
@@ -44,6 +56,7 @@ public class StructureRegistry {
 		DimensionStructuresSettings.field_236191_b_ = ImmutableMap.<Structure<?>, StructureSeparationSettings>builder().putAll(DimensionStructuresSettings.field_236191_b_).put(struct, separation).build();
 		FlatGenerationSettings.STRUCTURES.put(structure, structure.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 		return struct;
+
 	}
 
 	public static void registerFeature(String name, IStructure structure, StructureType type) {

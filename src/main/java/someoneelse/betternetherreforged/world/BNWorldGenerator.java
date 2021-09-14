@@ -5,6 +5,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
+<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/world/BNWorldGenerator.java
+=======
+import net.minecraftforge.common.world.StructureSpawnManager;
+import someoneelse.betternetherreforged.BetterNether;
+>>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/world/BNWorldGenerator.java
 import someoneelse.betternetherreforged.biomes.NetherBiome;
 import someoneelse.betternetherreforged.blocks.BlockStalactite;
 import someoneelse.betternetherreforged.config.Configs;

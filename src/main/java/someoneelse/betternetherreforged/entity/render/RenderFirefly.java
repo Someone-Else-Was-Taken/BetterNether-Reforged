@@ -6,6 +6,10 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 
+<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/entity/render/RenderFirefly.java
+=======
+import net.minecraftforge.fml.common.registry.IEntityAdditionalSpawnData;
+>>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/entity/render/RenderFirefly.java
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.entity.EntityFirefly;
 import someoneelse.betternetherreforged.entity.model.ModelEntityFirefly;
@@ -26,7 +30,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Matrix3f;
 import net.minecraft.util.math.vector.Matrix4f;
 import net.minecraft.util.math.vector.Vector3f;
-
+/*
 public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<EntityFirefly>> {
 	private static final ResourceLocation TEXTURE = new ResourceLocation(BetterNether.MOD_ID, "textures/entity/firefly.png");
 	private static final RenderType LAYER = RenderLayers.getFirefly(TEXTURE); // getEntityTranslucent
@@ -46,6 +50,7 @@ public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<Entit
 
 	@Override
 	public void render(EntityFirefly entity, float f, float g, MatrixStack matrixStack, IRenderTypeBuffer vertexConsumerProvider, int i) {
+
 		RenderSystem.enableDepthTest();
 		RenderSystem.enableBlend();
 
@@ -153,6 +158,7 @@ public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<Entit
 		if (this.canRenderName(entity)) {
 			this.renderName(entity, entity.getDisplayName(), matrixStack, vertexConsumerProvider, i);
 		}
+
 	}
 
 	public void addVertex(Matrix4f matrix4f, Matrix3f matrix3f, IVertexBuilder vertexConsumer, float posX, float posY, float u, float v, float red, float green, float blue) {
@@ -163,5 +169,9 @@ public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<Entit
 	protected int getBlockLight(EntityFirefly entity, BlockPos blockPos) {
 		return 15;
 	}
+
+
+
 }
 
+*/
