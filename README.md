@@ -28,13 +28,13 @@ Please contact me directly if there are any issues that arise with this port exi
  
 
 Known Issues and Unfinished Content:
-- Nether Cities don't spawn
+- Nether Cities don't spawn (Now in progress)
 
-- Fireflies aren't implemented 
+- Fireflies aren't implemented (Now in progress)
 
 - Caves don't support many features from other mods
 
-- Modded Mobs don't spawn 
+- Modded Mobs don't spawn (Waiting for Fireflies)
 
 - Server works now, however it runs into unique crashes. I would recommend LAN for now.
 
