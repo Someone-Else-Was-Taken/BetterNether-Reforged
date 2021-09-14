@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "betternether",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "betternether:cincinnasite_forged"
+    }
+  },
+  "result": {
+    "item": "betternether:cincinnasite_stairs",
+    "count": 4
+  }
+}

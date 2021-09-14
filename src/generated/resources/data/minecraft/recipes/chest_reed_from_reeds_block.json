@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "betternether",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "betternether:reeds_block"
+    }
+  },
+  "result": {
+    "item": "betternether:chest_reed"
+  }
+}

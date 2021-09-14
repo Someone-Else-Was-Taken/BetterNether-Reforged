@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "betternether",
+  "ingredients": [
+    {
+      "item": "betternether:anchor_tree_planks"
+    }
+  ],
+  "result": {
+    "item": "betternether:anchor_tree_button"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "betternether",
+  "pattern": [
+    "#I#",
+    " # ",
+    "L L"
+  ],
+  "key": {
+    "#": {
+      "item": "betternether:nether_brick_tile_large"
+    },
+    "I": {
+      "item": "minecraft:nether_brick"
+    },
+    "L": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "result": {
+    "item": "betternether:bricks_fire_bowl"
+  }
+}

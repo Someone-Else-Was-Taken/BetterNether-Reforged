@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "betternether",
+  "ingredients": [
+    {
+      "item": "betternether:stalagnate_log"
+    }
+  ],
+  "result": {
+    "item": "betternether:stalagnate_planks",
+    "count": 4
+  }
+}

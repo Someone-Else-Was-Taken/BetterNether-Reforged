@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "betternether",
+  "ingredients": [
+    {
+      "item": "betternether:reeds_block"
+    }
+  ],
+  "result": {
+    "item": "betternether:reeds_button"
+  }
+}

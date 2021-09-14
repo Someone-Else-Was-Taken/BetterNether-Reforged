@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "betternether",
+  "ingredients": [
+    {
+      "item": "betternether:nether_sakura_planks"
+    }
+  ],
+  "result": {
+    "item": "betternether:nether_sakura_button"
+  }
+}
