@@ -1,17 +1,16 @@
 {
   "required": true,
-  "package": "itsremurin.betternetherreforged.mixin",
+  "package": "someoneelse.betternetherreforged.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "betternether.refmap.json",
   "mixins": [
     "ChunkGeneratorMixin",
     "ChunkSerializerMixin",
-    "ClientPlayNetHandlerMixin",
     "DimensionTypeMixin",
     "ServerWorldMixin",
     "WorkbenchContainerMixin"
   ],
-  "client": [],
+  "client": ["ClientPlayNetHandlerMixin"],
   "injectors": {
     "defaultRequire": 1
   },
