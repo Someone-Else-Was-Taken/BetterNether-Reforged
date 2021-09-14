@@ -17,14 +17,11 @@ import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.feature.structure.StructureManager;
 import net.minecraft.world.gen.feature.template.StructureProcessor;
 import net.minecraft.world.gen.feature.template.TemplateManager;
-<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/world/structures/piece/CityPiece.java
 import someoneelse.betternetherreforged.BlocksHelper;
-=======
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import someoneelse.betternetherreforged.BlocksHelper;
 import someoneelse.betternetherreforged.structures.StructureType;
->>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/world/structures/piece/CityPiece.java
 import someoneelse.betternetherreforged.world.structures.city.BuildingStructureProcessor;
 import someoneelse.betternetherreforged.world.structures.city.StructureCityBuilding;
 import someoneelse.betternetherreforged.world.structures.city.palette.CityPalette;

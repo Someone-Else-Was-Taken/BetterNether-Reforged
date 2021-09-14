@@ -6,10 +6,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 
-<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/entity/render/RenderFirefly.java
-=======
-import net.minecraftforge.fml.common.registry.IEntityAdditionalSpawnData;
->>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/entity/render/RenderFirefly.java
+
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.entity.EntityFirefly;
 import someoneelse.betternetherreforged.entity.model.ModelEntityFirefly;
@@ -30,7 +27,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Matrix3f;
 import net.minecraft.util.math.vector.Matrix4f;
 import net.minecraft.util.math.vector.Vector3f;
-/*
+
 public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<EntityFirefly>> {
 	private static final ResourceLocation TEXTURE = new ResourceLocation(BetterNether.MOD_ID, "textures/entity/firefly.png");
 	private static final RenderType LAYER = RenderLayers.getFirefly(TEXTURE); // getEntityTranslucent
@@ -174,4 +171,3 @@ public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<Entit
 
 }
 
-*/

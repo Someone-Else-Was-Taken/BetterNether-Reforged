@@ -5,13 +5,11 @@ import java.util.Map;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 
-<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/registry/StructureRegistry.java
-=======
+
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraftforge.event.RegistryEvent;
->>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/registry/StructureRegistry.java
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.config.Configs;
 import someoneelse.betternetherreforged.structures.IStructure;

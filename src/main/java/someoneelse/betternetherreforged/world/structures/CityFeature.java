@@ -2,13 +2,11 @@ package someoneelse.betternetherreforged.world.structures;
 
 import java.util.List;
 
-<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/world/structures/CityFeature.java
-=======
+
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import someoneelse.betternetherreforged.BetterNether;
->>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/world/structures/CityFeature.java
 import someoneelse.betternetherreforged.world.structures.city.CityGenerator;
 import someoneelse.betternetherreforged.world.structures.piece.CavePiece;
 import someoneelse.betternetherreforged.world.structures.piece.CityPiece;

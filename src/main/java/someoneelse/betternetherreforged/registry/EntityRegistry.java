@@ -22,7 +22,6 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
-<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/registry/EntityRegistry.java
 import someoneelse.betternetherreforged.entity.EntityChair;
 import someoneelse.betternetherreforged.entity.EntityFlyingPig;
 import someoneelse.betternetherreforged.entity.EntityHydrogenJellyfish;
@@ -30,9 +29,8 @@ import someoneelse.betternetherreforged.entity.EntityJungleSkeleton;
 import someoneelse.betternetherreforged.entity.EntityNaga;
 import someoneelse.betternetherreforged.entity.EntityNagaProjectile;
 import someoneelse.betternetherreforged.entity.EntitySkull;
-=======
+
 import someoneelse.betternetherreforged.entity.*;
->>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/registry/EntityRegistry.java
 
 public class EntityRegistry {
 	public static final Map<EntityType<? extends LivingEntity>, AttributeModifierMap> ATTRIBUTES = Maps.newHashMap();

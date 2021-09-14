@@ -1,27 +1,22 @@
 package someoneelse.betternetherreforged;
 
-<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/BetterNether.java
-=======
+
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
->>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/BetterNether.java
 import someoneelse.betternetherreforged.biomes.NetherBiome;
 import someoneelse.betternetherreforged.blocks.BNRenderLayer;
 import someoneelse.betternetherreforged.client.IRenderTypeable;
 import someoneelse.betternetherreforged.config.Config;
 import someoneelse.betternetherreforged.config.Configs;
 import someoneelse.betternetherreforged.registry.*;
-<<<<<<< Updated upstream:src/main/java/someoneelse/betternetherreforged/BetterNether.java
 import someoneelse.betternetherreforged.world.BNWorldGenerator;
 import someoneelse.betternetherreforged.world.NetherBiomeProvider;
-=======
 import someoneelse.betternetherreforged.structures.StructureType;
 import someoneelse.betternetherreforged.world.BNWorldGenerator;
 import someoneelse.betternetherreforged.world.NetherBiomeProvider;
 import someoneelse.betternetherreforged.world.structures.CityFeature;
->>>>>>> Stashed changes:src/main/java/itsremurin/betternetherreforged/BetterNether.java
 import someoneelse.betternetherreforged.world.structures.piece.StructureTypes;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
