@@ -2,7 +2,8 @@
 .git
 .gradle
 .idea
-.build
-.logs
-.run
+build
+logs
+run
+gradle
 

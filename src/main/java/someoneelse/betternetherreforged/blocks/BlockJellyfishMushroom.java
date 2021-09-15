@@ -84,6 +84,7 @@ public class BlockJellyfishMushroom extends BlockBaseNotFull {
 		}
 	}
 
+
 	@Override
 	public void onFallenUpon(World world, BlockPos pos, Entity entity, float distance) {
 		if (world.getBlockState(pos).get(SHAPE) != TripleShape.TOP)
@@ -94,19 +95,27 @@ public class BlockJellyfishMushroom extends BlockBaseNotFull {
 			entity.onLivingFall(distance, 0.0F);
 	}
 
+
 	@Override
-	public void onLanded(IBlockReader world, Entity entity) {
+	@OnlyIn(Dist.CLIENT)
+	public void onLanded(IBlockReader world, Entity entity)
+	{
 		if (entity.isSuppressingBounce())
 			super.onLanded(world, entity);
 		else
 			this.bounce(entity);
 	}
 
-	private void bounce(Entity entity) {
-		Vector3d vec3d = entity.getMotion();
-		if (vec3d.y < 0.0D) {
-			double d = entity instanceof LivingEntity ? 1.0D : 0.8D;
-			entity.setVelocity(vec3d.x, -vec3d.y * d, vec3d.z);
+
+
+
+	private void bounce(Entity entity)
+	{
+		Vector3d Vector3d = entity.getMotion();
+		if (Vector3d.y < 0.0D)
+		{
+			//double d = entity instanceof LivingEntity ? 1.0D : 0.8D;
+			entity.setVelocity(Vector3d.x, -Vector3d.y, Vector3d.z);
 		}
 	}
 
