@@ -9,6 +9,7 @@ import com.google.common.collect.Maps;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.feature.StructureFeature;
+import net.minecraft.world.gen.feature.structure.IStructurePieceType;
 import net.minecraftforge.event.RegistryEvent;
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.config.Configs;
@@ -29,11 +30,10 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import someoneelse.betternetherreforged.structures.plants.*;
+import someoneelse.betternetherreforged.world.structures.piece.CityPiece;
 
 public class StructureRegistry {
 	private static final Map<StructureType, Map<String, IStructure>> REGISTRY;
-
-
 
 
 
@@ -43,7 +43,6 @@ public class StructureRegistry {
 	public static final DeferredRegister<Structure<?>> DEFERRED_STRUCTURES = DeferredRegister.create(ForgeRegistries.STRUCTURE_FEATURES, BetterNether.MOD_ID);
 	public static final DeferredRegister<Feature<?>> DEFERRED_FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, BetterNether.MOD_ID);
 	
-	public static final Structure<NoFeatureConfig> NETHER_CITY = registerStructure("nether_city", new CityFeature(), GenerationStage.Decoration.RAW_GENERATION, new StructureSeparationSettings(cityDistance, citySeparation, 1234));
 
 	public static <S extends Structure<NoFeatureConfig>> S registerStructure(String name, S structure, GenerationStage.Decoration stage, StructureSeparationSettings separation) {
 

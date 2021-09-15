@@ -68,6 +68,7 @@ public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<Entit
 		addVertex(matrix4f, matrix3f, vertexConsumer, -1, 1, 0F, 1F, red, green, blue);
 		matrixStack.pop();
 
+
 		matrixStack.push();
 		this.entityModel.swingProgress = this.getSwingProgress(entity, g);
 		this.entityModel.isSitting = entity.isPassenger();
@@ -76,41 +77,36 @@ public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<Entit
 		float j = MathHelper.interpolateAngle(g, entity.prevRotationYawHead, entity.rotationYawHead);
 		float k = j - h;
 		float o;
-		if (entity.isPassenger() && entity.getRidingEntity() instanceof LivingEntity)
-		{
+		if (entity.isPassenger() && entity.getRidingEntity() instanceof LivingEntity) {
 			LivingEntity mobEntity2 = (LivingEntity) entity.getRidingEntity();
 			h = MathHelper.interpolateAngle(g, mobEntity2.prevRenderYawOffset, mobEntity2.renderYawOffset);
 			k = j - h;
 			o = MathHelper.wrapDegrees(k);
-			if (o < -85.0F)
-			{
+			if (o < -85.0F) {
 				o = -85.0F;
 			}
 
-			if (o >= 85.0F)
-			{
+			if (o >= 85.0F) {
 				o = 85.0F;
 			}
 
 			h = j - o;
-			if (o * o > 2500.0F)
-			{
+			if (o * o > 2500.0F) {
 				h += o * 0.2F;
 			}
 
 			k = j - h;
 		}
 
+
 		float m = MathHelper.lerp(g, entity.prevRotationPitch, entity.rotationPitch);
 		float p;
-		if (entity.getPose() == Pose.SLEEPING)
-		{
+		if (entity.getPose() == Pose.SLEEPING) {
 			Direction direction = entity.getBedDirection();
-			if (direction != null)
-			{
+			if (direction != null) {
 				p = entity.getEyeHeight(Pose.STANDING) - 0.1F;
 				matrixStack.translate((double) ((float) (-direction.getXOffset()) * p), 0.0D,
-						(double) ((float) (-direction.getYOffset()) * p));
+						(double) ((float) (-direction.getZOffset()) * p));
 			}
 		}
 
@@ -121,17 +117,14 @@ public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<Entit
 		matrixStack.translate(0.0D, -1.5010000467300415D, 0.0D);
 		p = 0.0F;
 		float q = 0.0F;
-		if (!entity.isPassenger() && entity.isAlive())
-		{
+		if (!entity.isPassenger() && entity.isAlive()) {
 			p = MathHelper.lerp(g, entity.prevLimbSwingAmount, entity.limbSwingAmount);
 			q = entity.limbSwing - entity.limbSwingAmount * (1.0F - g);
-			if (entity.isChild())
-			{
+			if (entity.isChild()) {
 				q *= 3.0F;
 			}
 
-			if (p > 1.0F)
-			{
+			if (p > 1.0F) {
 				p = 1.0F;
 			}
 		}
@@ -142,13 +135,23 @@ public class RenderFirefly extends MobRenderer<EntityFirefly, AgeableModel<Entit
 		boolean ghost = !visible && !entity.isInvisibleToPlayer(Minecraft.getInstance().player);
 		Minecraft client = Minecraft.getInstance();
 		boolean bl3 = client.isEntityGlowing(entity);
-		RenderType layer = this.func_230496_a_(entity, visible, ghost, bl3);
-		if (layer != null)
-		{
+		boolean outline = client.isEntityGlowing(entity);
+		RenderType layer = this.func_230496_a_(entity, visible, ghost, outline);
+		if (layer != null) {
 			int r = getPackedOverlay(entity, 0);
 			this.entityModel.render(matrixStack, vertexConsumer, i, r, red, green, blue, ghost ? 0.15F : 1.0F);
 
 		}
+
+		if (!entity.isSpectator()) {
+			Iterator<?> var21 = this.layerRenderers.iterator();
+			while (var21.hasNext()) {
+				@SuppressWarnings("unchecked")
+				LayerRenderer<EntityFirefly, AgeableModel<EntityFirefly>> feature = (LayerRenderer<EntityFirefly, AgeableModel<EntityFirefly>>) var21.next();
+				feature.render(matrixStack, vertexConsumerProvider, i, entity, q, p, g, o, k, m);
+			}
+		}
+
 
 		if (!entity.isSpectator())
 		{
