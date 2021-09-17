@@ -2,7 +2,7 @@
   "required": true,
   "package": "someoneelse.betternetherreforged.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "betternether.refmap.json",
+  "refmap": "betternether_reforged.refmap.json",
   "mixins": [
     "ChunkGeneratorMixin",
     "ChunkSerializerMixin",

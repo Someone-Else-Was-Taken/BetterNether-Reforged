@@ -98,7 +98,7 @@ public class NetherBiome extends ForgeRegistryEntry<NetherBiome> {
 	protected static final StructureStalactite STALAGMITE_BASALT = new StructureStalactite(BlocksRegistry.BASALT_STALACTITE, Blocks.BASALT, Blocks.BASALT, Blocks.NETHERRACK);
 
 	public NetherBiome(BiomeDefinition definition) {
-		//definition.addMobSpawn(EntityRegistry.FIREFLY, 5, 2, 6);
+		definition.addMobSpawn(EntityRegistry.FIREFLY, 5, 2, 6);
 		definition.addMobSpawn(EntityRegistry.SKULL, 2, 2, 4);
 		definition.addMobSpawn(EntityRegistry.NAGA, 20, 2, 4);
 		definition.addMobSpawn(EntityRegistry.HYDROGEN_JELLYFISH, 5, 2, 5);

@@ -43,6 +43,7 @@ public class CrimsonPinewood extends NetherBiome {
 		addStructure("wall_red_mushroom", new StructureWallRedMushroom(), StructureType.WALL, 0.4F, true);
 	}
 
+
 	@Override
 	public void genSurfColumn(IWorld world, BlockPos pos, Random random) {
 		if (TERRAIN.eval(pos.getX() * 0.1, pos.getZ() * 0.1) > MHelper.randRange(0.5F, 0.7F, random))

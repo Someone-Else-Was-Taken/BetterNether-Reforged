@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
+import net.minecraft.util.datafix.fixes.BiomeName;
+import net.minecraft.util.datafix.fixes.SpawnerEntityTypes;
+import net.minecraft.util.registry.Registry;
 import someoneelse.betternetherreforged.config.Configs;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -32,6 +35,7 @@ import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.registries.ForgeRegistries;
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.MHelper;
+import someoneelse.betternetherreforged.registry.EntityRegistry;
 
 
 public class BiomeDefinition {
@@ -44,6 +48,7 @@ public class BiomeDefinition {
 	private MoodSoundAmbience mood;
 	private SoundEvent music;
 	private SoundEvent loop;
+
 
 	private int waterFogColor = 329011;
 	private int waterColor = 4159204;
@@ -126,6 +131,7 @@ public class BiomeDefinition {
 		return this;
 	}
 
+
 	public BiomeDefinition setParticleConfig(ParticleEffectAmbience config) {
 		this.particleConfig = config;
 		return this;
@@ -136,8 +142,6 @@ public class BiomeDefinition {
 	 * 
 	 * @param type
 	 *            - {@link EntityType}
-	 * @param group
-	 *            - {@link SpawnGroup}
 	 * @param weight
 	 *            - cumulative spawning weight
 	 * @param minGroupSize
@@ -147,8 +151,8 @@ public class BiomeDefinition {
 	 * @return this {@link BiomeDefinition}
 	 */
 	public BiomeDefinition addMobSpawn(EntityType<?> type, int weight, int minGroupSize, int maxGroupSize) {
-		ResourceLocation eID = ForgeRegistries.ENTITIES.getKey(type);
-		if (eID != ForgeRegistries.ENTITIES.getDefaultKey()) {
+		ResourceLocation eID = Registry.ENTITY_TYPE.getKey(type);
+		if (eID == Registry.ENTITY_TYPE.getDefaultKey()) {
 			String path = "generator.biome." + id.getNamespace() + "." + id.getPath() + ".mobs." + eID.getNamespace() + "." + eID.getPath();
 			SpawnInfo info = new SpawnInfo();
 			info.type = type;
@@ -159,6 +163,10 @@ public class BiomeDefinition {
 		}
 		return this;
 	}
+
+
+
+
 
 	/**
 	 * Adds feature (small structure) into biome - plants, ores, small
@@ -289,15 +297,23 @@ public class BiomeDefinition {
 		return this;
 	}
 
+
 	public Biome build() {
 		MobSpawnInfo.Builder spawnSettings = new MobSpawnInfo.Builder();
 		BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
 		BiomeAmbience.Builder effects = new BiomeAmbience.Builder();
 
+
+
 		if (defaultMobs) addDefaultMobs(spawnSettings);
 		mobs.forEach((spawn) -> {
 			spawnSettings.withSpawner(spawn.type.getClassification(), new MobSpawnInfo.Spawners(spawn.type, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize));
 		});
+
+
+
+
+
 
 		generationSettings.withSurfaceBuilder(ConfiguredSurfaceBuilders.field_244183_o);
 		structures.forEach((structure) -> generationSettings.withStructure(structure));
@@ -325,6 +341,7 @@ public class BiomeDefinition {
 				.withGenerationSettings(generationSettings.build())
 				.build();
 	}
+
 
 	private void addDefaultStructures(BiomeGenerationSettings.Builder generationSettings) {
 		generationSettings.withStructure(StructureFeatures.RUINED_PORTAL_NETHER);
@@ -361,6 +378,8 @@ public class BiomeDefinition {
 		int minGroupSize;
 		int maxGroupSize;
 	}
+
+
 
 	private static final class FeatureInfo {
 		GenerationStage.Decoration featureStep;

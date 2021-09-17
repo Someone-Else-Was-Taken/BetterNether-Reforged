@@ -7,7 +7,7 @@ version="${file.jarVersion}" #mandatory
 displayName="Better Nether Reforged" #mandatory
 logoFile="examplemod.png" #optional
 credits="Paulevs for the original, Redd90 for the port" #optional
-authors="Paulevs (Fabric Original), ItsRemurin (Forge port)" #optional
+authors="Paulevs (Fabric Original), SomeoneElse (Forge port)" #optional
 description='''
 This is a long form description of the mod. You can write whatever you want here
 

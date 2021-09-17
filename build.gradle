@@ -18,7 +18,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
 version = '1.0'
-group = 'itsremurin.betternetherreforged' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'someoneelse.betternetherreforged' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'betternether'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -143,7 +143,7 @@ jar {
             "Implementation-Vendor" :"Redd90",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
 			"MixinConfigs": "betternether.mixins.json",
-			"MixinConnector":"itsremurin.betternetherreforged.mixin.MixinConnector"
+			"MixinConnector":"someoneelse.betternetherreforged.mixin.MixinConnector"
         ])
     }
 }

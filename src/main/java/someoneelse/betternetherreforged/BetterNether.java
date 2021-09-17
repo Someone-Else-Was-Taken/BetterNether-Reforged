@@ -74,8 +74,8 @@ public class BetterNether
     	//StructureRegistry.DEFERRED_FEATURES.register(modEventBus);
     	//StructureRegistry.DEFERRED_STRUCTURES.register(modEventBus);
     	NetherBiomesRegistry.init();
-    	EntityRegistry.registerNetherEntities();
     	StructureTypes.init();
+		EntityRegistry.registerNetherEntities();
     	BNWorldGenerator.onModInit();
     	BrewingRegistry.register();
     	Config.save();
