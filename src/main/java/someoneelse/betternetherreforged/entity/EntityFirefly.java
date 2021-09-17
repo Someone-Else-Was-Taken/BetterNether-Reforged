@@ -393,7 +393,7 @@ public class EntityFirefly extends AnimalEntity implements IFlyingAnimal {
 			timer = 0;
 			ammount = EntityFirefly.this.rand.nextInt(21) + 20;
 			EntityFirefly.this.mustSit = false;
-			EntityFirefly.this.setVelocity(0, -0.1, 0);
+			EntityFirefly.this.setMotion(0, -0.1, 0);
 			super.startExecuting();
 		}
 
