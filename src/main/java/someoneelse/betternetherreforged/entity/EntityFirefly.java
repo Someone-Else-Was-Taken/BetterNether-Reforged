@@ -249,7 +249,7 @@ public class EntityFirefly extends AnimalEntity implements IFlyingAnimal {
 			if (path != null)
 				EntityFirefly.this.navigator.setPath(path, 1.0D);
 			else
-				EntityFirefly.this.setVelocity(0, -0.2, 0);
+				EntityFirefly.this.setMotion(0, -0.2, 0);
 			// }
 			super.startExecuting();
 		}
@@ -399,7 +399,7 @@ public class EntityFirefly extends AnimalEntity implements IFlyingAnimal {
 
 		@Override
 		public void resetTask() {
-			EntityFirefly.this.setVelocity(0, 0.1, 0);
+			EntityFirefly.this.setMotion(0, 0.1, 0);
 			super.resetTask();
 		}
 
