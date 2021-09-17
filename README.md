@@ -1,7 +1,7 @@
 # BetterNether-Reforged
 This is an unofficial, semi unfinished port of Fabric's BetterNether Mod, started by Redd90 and finished/maintained by me.
 There will be daily commits tweaking and testing out fixes and implementations of unfinished features. Pushed to CF every few days (Or sooner hopefully)
-
+Pre-Releases in progress.
  
 
 This mod was designed as improvement for the Nether, adding more biomes, plants and materials into it. I've tried to make its content unique and interesting for exploring as also useful.
@@ -30,13 +30,13 @@ Please contact me directly if there are any issues that arise with this port exi
 Known Issues and Unfinished Content:
 - Nether Cities don't spawn (Now in progress)
 
-- Fireflies aren't implemented (Now in progress)
+- ~~Fireflies aren't implemented (Now in progress)~~
 
-- Caves don't support many features from other mods
+- Caves don't support surface builders
 
-- Modded Mobs don't spawn (Waiting for Fireflies)
+- ~~Modded Mobs don't spawn (Waiting for Fireflies)~~
 
-- Server works now, however it runs into unique crashes. I would recommend LAN for now.
+- ~~Server works now, however it runs into unique crashes. I would recommend LAN for now.~~
 
  
 
