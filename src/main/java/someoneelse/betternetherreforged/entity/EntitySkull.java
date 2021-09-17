@@ -181,7 +181,7 @@ public class EntitySkull extends MonsterEntity implements IFlyingAnimal {
 		dx /= l;
 		dy /= l;
 		dz /= l;
-		setVelocity(dx, dy, dz);
+		setMotion(dx, dy, dz);
 		lookAt(this.getPositionVec().add(this.getMotion()));
 		this.playSound(SoundsRegistry.MOB_SKULL_FLIGHT, MHelper.randRange(0.15F, 0.3F, rand), MHelper.randRange(0.75F, 1.25F, rand));
 	}

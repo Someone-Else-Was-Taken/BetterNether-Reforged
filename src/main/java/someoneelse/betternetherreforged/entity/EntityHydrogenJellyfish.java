@@ -163,7 +163,7 @@ public class EntityHydrogenJellyfish extends AnimalEntity implements IFlyingAnim
 			if (this.rotationYaw != nextYaw) {
 				float delta = timer / 120F;
 				this.rotationYaw = lerpAngleDegrees(delta, prewYaw, nextYaw);
-				this.setVelocity(
+				this.setMotion(
 						MathHelper.lerp(delta, preVelocity.x, newVelocity.x),
 						MathHelper.lerp(delta, preVelocity.y, newVelocity.y),
 						MathHelper.lerp(delta, preVelocity.z, newVelocity.z));
