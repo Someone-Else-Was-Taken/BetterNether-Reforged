@@ -30,7 +30,13 @@ public class EntityChair extends MobEntity {
 		super.livingTick();
 		this.setMotion(Vector3d.ZERO);
 	}
-	
+
+	@Override
+	public boolean isAlive() {
+		return !this.removed;
+	}
+
+
 	public static AttributeModifierMap getAttributeContainer() {
 		return MobEntity.func_233666_p_().createMutableAttribute(Attributes.MAX_HEALTH, 0).create();
 		
