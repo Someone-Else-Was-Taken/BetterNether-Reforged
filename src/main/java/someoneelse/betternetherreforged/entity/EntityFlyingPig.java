@@ -239,11 +239,11 @@ public class EntityFlyingPig extends AnimalEntity implements IFlyingAnimal {
 				if (path != null)
 					EntityFlyingPig.this.navigator.setPath(path, EntityFlyingPig.this.jumpMovementFactor);
 				else
-					EntityFlyingPig.this.setVelocity(0, -0.2, 0);
+					EntityFlyingPig.this.setMotion(0, -0.2, 0);
 				EntityFlyingPig.this.setRoosting(false);
 			}
 			else
-				EntityFlyingPig.this.setVelocity(0, 1, 0);
+				EntityFlyingPig.this.setMotion(0, 1, 0);
 			super.startExecuting();
 		}
 
@@ -357,7 +357,7 @@ public class EntityFlyingPig extends AnimalEntity implements IFlyingAnimal {
 		public void startExecuting() {
 			timer = 0;
 			ammount = MHelper.randRange(80, 160, EntityFlyingPig.this.rand);
-			EntityFlyingPig.this.setVelocity(0, 0, 0);
+			EntityFlyingPig.this.setMotion(0, 0, 0);
 			EntityFlyingPig.this.setRenderYawOffset(EntityFlyingPig.this.rand.nextFloat() * MHelper.PI2);
 			super.startExecuting();
 		}
@@ -365,7 +365,7 @@ public class EntityFlyingPig extends AnimalEntity implements IFlyingAnimal {
 		@Override
 		public void resetTask() {
 			EntityFlyingPig.this.setRoosting(false);
-			EntityFlyingPig.this.setVelocity(0, -0.1F, 0);
+			EntityFlyingPig.this.setMotion(0, -0.1F, 0);
 			EntityFlyingPig.this.preGoal = this;
 			super.resetTask();
 		}
