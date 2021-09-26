@@ -15,6 +15,7 @@ import net.minecraft.world.gen.settings.StructureSeparationSettings;
 import net.minecraftforge.common.world.StructureSpawnManager;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.biomes.NetherBiome;
 import someoneelse.betternetherreforged.blocks.BlockStalactite;
@@ -73,8 +74,10 @@ public class BNWorldGenerator {
 	protected static int biomeSizeY;
 	protected static boolean volumetric;
 
-	public static final CityFeature NETHER_CITY = new CityFeature(NoFeatureConfig.field_236558_a_);
-	public static final StructureFeature<NoFeatureConfig, ? extends Structure<NoFeatureConfig>> CITY_CONFIGURED = NETHER_CITY.withConfiguration(NoFeatureConfig.field_236559_b_);
+	public static final CityFeature CITY = new CityFeature(NoFeatureConfig.field_236558_a_);
+	public static final StructureFeature<NoFeatureConfig, ? extends Structure<NoFeatureConfig>> CITY_CONFIGURED = CITY.withConfiguration(NoFeatureConfig.field_236559_b_);
+
+
 
 	public static void onModInit() {
 		hasCleaningPass = Configs.GENERATOR.getBoolean("generator.world.terrain", "terrain_cleaning_pass", true);
@@ -97,9 +100,12 @@ public class BNWorldGenerator {
 		int distance = Configs.GENERATOR.getInt("generator.world.cities", "distance", 64);
 		int separation = distance >> 1;
 
-		Configs.GENERATOR.getBoolean("generator.world.cities", "generate", true);
+	Configs.GENERATOR.getBoolean("generator.world.cities", "generate", true);
+
+
 
 	}
+
 
 
 	public static void init(long seed) {

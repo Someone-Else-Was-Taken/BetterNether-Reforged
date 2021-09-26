@@ -94,13 +94,6 @@ public class StructureCityBuilding extends StructureNBT {
 	}
 
 	public boolean placeInChunk(IServerWorld world, BlockPos pos, MutableBoundingBox boundingBox, StructureProcessor paletteProcessor) {
-		if(structure == null)
-		{
-			System.out.println("No template: " + location.toString());
-			return false;
-		}
-
-		BetterNether.LOGGER.debug("CityBuildingStructure: Placing in chunk: " + location);
 		BlockPos p = pos.add(rotationOffset);
 		PlacementSettings placementsettings =
 				new PlacementSettings()

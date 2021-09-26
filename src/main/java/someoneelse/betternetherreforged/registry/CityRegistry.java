@@ -17,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CityRegistry {
+
     /**
      * We are using the Deferred Registry system to register our structure as this is the preferred way on Forge.
      * This will handle registering the base structure for us at the correct time so we don't have to handle it ourselves.
@@ -25,6 +26,7 @@ public class CityRegistry {
      * configured structures and configured features need to be registered directly to WorldGenRegistries as there
      * is no Deferred Registry system for them.
      */
+
     public static final DeferredRegister<Structure<?>> DEFERRED_REGISTRY_STRUCTURE = DeferredRegister.create(ForgeRegistries.STRUCTURE_FEATURES, BetterNether.MOD_ID);
 
     /**
@@ -48,16 +50,17 @@ public class CityRegistry {
      * This is where we set the rarity of your structures and determine if land conforms to it.
      * See the comments in below for more details.
      */
+
     public static void setupStructures() {
         setupMapSpacingAndLand(
                 CITY.get(), /* The instance of the structure */
-                new StructureSeparationSettings(10 /* average distance apart in chunks between spawn attempts */,
-                        5 /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/,
-                        1234567890 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */)
-                );
+                new StructureSeparationSettings(16 /* average distance apart in chunks between spawn attempts */,
+                        16 >> 1 /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/,
+                        1234 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */),
+                true);
 
 
-        // Add more structures here and so on
+        //Add more structures here and so on
     }
 
     /**
@@ -66,36 +69,49 @@ public class CityRegistry {
      * this method in the structureSeparationSettings argument.
      * This method is called by setupStructures above.
      */
+
     public static <F extends Structure<?>> void setupMapSpacingAndLand(
             F structure,
-            StructureSeparationSettings structureSeparationSettings)
-    {
+            StructureSeparationSettings structureSeparationSettings,
+            boolean transformSurroundingLand) {
 
         Structure.NAME_STRUCTURE_BIMAP.put(structure.getRegistryName().toString(), structure);
 
+        if (transformSurroundingLand) {
+            Structure.field_236384_t_ =
+                    ImmutableList.<Structure<?>>builder()
+                            .addAll(Structure.field_236384_t_)
+                            .add(structure)
+                            .build();
 
-        DimensionStructuresSettings.field_236191_b_ =
-                ImmutableMap.<Structure<?>, StructureSeparationSettings>builder()
-                        .putAll(DimensionStructuresSettings.field_236191_b_)
-                        .put(structure, structureSeparationSettings)
-                        .build();
 
-        WorldGenRegistries.NOISE_SETTINGS.getEntries().forEach(settings -> {
-            Map<Structure<?>, StructureSeparationSettings> structureMap = settings.getValue().getStructures().func_236195_a_();
+            DimensionStructuresSettings.field_236191_b_ =
+                    ImmutableMap.<Structure<?>, StructureSeparationSettings>builder()
+                            .putAll(DimensionStructuresSettings.field_236191_b_)
+                            .put(structure, structureSeparationSettings)
+                            .build();
 
-            /*
-             * Pre-caution in case a mod makes the structure map immutable like datapacks do.
-             * I take no chances myself. You never know what another mods does...
-             *
-             * structureConfig requires AccessTransformer  (See resources/META-INF/accesstransformer.cfg)
-             */
-            if(structureMap instanceof ImmutableMap){
-                Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(structureMap);
-                tempMap.put(structure, structureSeparationSettings);
-            }
-            else{
-                structureMap.put(structure, structureSeparationSettings);
-            }
-        });
+            WorldGenRegistries.NOISE_SETTINGS.getEntries().forEach(settings -> {
+                Map<Structure<?>, StructureSeparationSettings> structureMap = settings.getValue().getStructures().func_236195_a_();
+
+
+
+                /*
+                 * Pre-caution in case a mod makes the structure map immutable like datapacks do.
+                 * I take no chances myself. You never know what another mods does...
+                 *
+                 * structureConfig requires AccessTransformer  (See resources/META-INF/accesstransformer.cfg)
+                 */
+
+                if (structureMap instanceof ImmutableMap) {
+                    Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(structureMap);
+                    tempMap.put(structure, structureSeparationSettings);
+                    settings.getValue().getStructures().func_236195_a_().equals(tempMap);
+                } else {
+                    structureMap.put(structure, structureSeparationSettings);
+                }
+            });
+        }
     }
+
 }

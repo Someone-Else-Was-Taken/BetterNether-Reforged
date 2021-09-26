@@ -50,7 +50,7 @@ public class CityPiece extends CustomPiece {
 		//this.paletteProcessor = new BuildingStructureProcessor(palette);
 	}
 
-	protected CityPiece(TemplateManager manager, CompoundNBT tag) {
+	public CityPiece(TemplateManager manager, CompoundNBT tag) {
 		super(StructureTypes.NETHER_CITY, tag);
 		this.building = new StructureCityBuilding(tag.getString("building"), tag.getInt("offset"));
 		this.building = this.building.getRotated(Rotation.values()[tag.getInt("rotation")]);
@@ -65,7 +65,7 @@ public class CityPiece extends CustomPiece {
 
 
 	@Override
-	protected void readAdditional(CompoundNBT tag) {
+	public void readAdditional(CompoundNBT tag) {
 		tag.putString("building", building.getName());
 		tag.putInt("rotation", building.getRotation().ordinal());
 		tag.putInt("mirror", building.getMirror().ordinal());

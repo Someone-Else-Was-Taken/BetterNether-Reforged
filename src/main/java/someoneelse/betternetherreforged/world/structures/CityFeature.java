@@ -44,7 +44,7 @@ public class CityFeature extends Structure<NoFeatureConfig> {
 
 	@Override
 	public IStartFactory<NoFeatureConfig> getStartFactory() {
-		return CityFeature.CityStart::new;
+		return CityFeature.Start::new;
 	}
 
 	public String getStructureName() {
@@ -56,23 +56,10 @@ public class CityFeature extends Structure<NoFeatureConfig> {
 		return GenerationStage.Decoration.STRONGHOLDS;
 	}
 
-	protected boolean func_230363_a_(ChunkGenerator generator, BiomeProvider biomeProvider, long seed, SharedSeedRandom seedRandom, int chunkx, int chunkz, Biome biome, ChunkPos chunkpos, NoFeatureConfig config) {
-		int q = chunkpos.x < 0 ? chunkpos.x - separation + 1 : chunkpos.x;
-		int r = chunkpos.z < 0 ? chunkpos.z - separation + 1 : chunkpos.z;
-		int s = q / distance;
-		int t = r / distance;
-		seedRandom.setLargeFeatureSeedWithSalt(seed, s, t, 897527);
-		s *= distance;
-		t *= distance;
-		s += seedRandom.nextInt(separation);
-		t += seedRandom.nextInt(separation);
-		return s == chunkpos.x && t == chunkpos.z;
-	}
 
+	public class Start extends StructureStart<NoFeatureConfig> {
 
-	public class CityStart extends StructureStart<NoFeatureConfig> {
-
-		public CityStart(Structure<NoFeatureConfig> structure, int chunkx, int chunkz,
+		public Start(Structure<NoFeatureConfig> structure, int chunkx, int chunkz,
 					 MutableBoundingBox bounds, int reference, long seed) {
 			super(structure, chunkx, chunkz, bounds, reference, seed);
 		}

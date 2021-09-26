@@ -18,6 +18,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 import someoneelse.betternetherreforged.noise.OpenSimplexNoise;
 import someoneelse.betternetherreforged.registry.BlocksRegistry;
+import someoneelse.betternetherreforged.registry.CityRegistry;
 import someoneelse.betternetherreforged.registry.EntityRegistry;
 import someoneelse.betternetherreforged.registry.StructureRegistry;
 import someoneelse.betternetherreforged.structures.IStructure;
@@ -92,7 +93,6 @@ public class NetherBiome extends ForgeRegistryEntry<NetherBiome> {
 
 	private ArrayList<String> structures;
 	private Biome actualBiome;
-
 
 
 

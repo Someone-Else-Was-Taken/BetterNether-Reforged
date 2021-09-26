@@ -106,8 +106,8 @@ public class CityGenerator {
 						for (int i = 0; i < building.getEndsCount(); i++)
 							if (i != index)
 								if (npos.getY() + building.getOffsettedPos(i).getY() < 32) {
-								validHeight = false;
-								break;
+									validHeight = false;
+									break;
 								}
 						if (validHeight) {
 							bounds.add(bb);

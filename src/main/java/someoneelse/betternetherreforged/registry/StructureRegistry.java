@@ -117,13 +117,6 @@ public class StructureRegistry {
 
 	}
 
-	public static final RegistryObject<Structure<NoFeatureConfig>> NETHER_CITY = register("nether_city", new CityFeature(NoFeatureConfig.field_236558_a_), GenerationStage.Decoration.STRONGHOLDS);
-
-	private static <T extends Structure<?>> RegistryObject<T> register(String name, T structure, GenerationStage.Decoration decoration) {
-		Structure.NAME_STRUCTURE_BIMAP.put(BetterNether.MOD_ID + ":" + name, structure);
-		Structure.STRUCTURE_DECORATION_STAGE_MAP.put(structure, decoration);
-		return STRUCTURES.register(name, () -> structure);
-	}
 
 
 
