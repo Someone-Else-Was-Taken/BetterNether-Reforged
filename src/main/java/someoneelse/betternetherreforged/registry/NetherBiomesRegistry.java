@@ -1,12 +1,15 @@
 package someoneelse.betternetherreforged.registry;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import com.google.common.collect.Maps;
 
+import net.minecraft.world.gen.ChunkGenerator;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.StructureFeature;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.fml.ModList;
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.biomes.*;
 import someoneelse.betternetherreforged.config.Config;
@@ -222,4 +225,7 @@ public class NetherBiomesRegistry {
 	public static ArrayList<NetherBiome> getAllBiomes() {
 		return ALL_BIOMES;
 	}
+
+
+
 }

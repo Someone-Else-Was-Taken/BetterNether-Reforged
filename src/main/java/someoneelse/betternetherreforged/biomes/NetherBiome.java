@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
+import net.minecraft.world.gen.feature.NoFeatureConfig;
+import net.minecraft.world.gen.feature.StructureFeature;
+import net.minecraft.world.gen.feature.structure.Structure;
 import someoneelse.betternetherreforged.config.Configs;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -16,12 +19,14 @@ import net.minecraftforge.registries.ForgeRegistryEntry;
 import someoneelse.betternetherreforged.noise.OpenSimplexNoise;
 import someoneelse.betternetherreforged.registry.BlocksRegistry;
 import someoneelse.betternetherreforged.registry.EntityRegistry;
+import someoneelse.betternetherreforged.registry.StructureRegistry;
 import someoneelse.betternetherreforged.structures.IStructure;
 import someoneelse.betternetherreforged.structures.StructureType;
 import someoneelse.betternetherreforged.structures.StructureWorld;
 import someoneelse.betternetherreforged.structures.decorations.StructureStalactite;
 import someoneelse.betternetherreforged.structures.decorations.StructureStalagmite;
 import someoneelse.betternetherreforged.structures.plants.StructureWartCap;
+import someoneelse.betternetherreforged.world.structures.CityFeature;
 
 public class NetherBiome extends ForgeRegistryEntry<NetherBiome> {
 	private static final OpenSimplexNoise SCATTER = new OpenSimplexNoise(1337);
@@ -82,10 +87,14 @@ public class NetherBiome extends ForgeRegistryEntry<NetherBiome> {
 			structureFormat("lava/pyramid_3", -1, StructureType.LAVA, 1F),
 			structureFormat("lava/pyramid_4", -1, StructureType.LAVA, 1F),
 
+
 	};
 
 	private ArrayList<String> structures;
 	private Biome actualBiome;
+
+
+
 
 	protected static final StructureStalagmite STALACTITE_NETHERRACK = new StructureStalagmite(BlocksRegistry.NETHERRACK_STALACTITE, null);
 	protected static final StructureStalagmite STALACTITE_GLOWSTONE = new StructureStalagmite(BlocksRegistry.GLOWSTONE_STALACTITE, Blocks.GLOWSTONE);
@@ -96,7 +105,6 @@ public class NetherBiome extends ForgeRegistryEntry<NetherBiome> {
 	protected static final StructureStalactite STALAGMITE_GLOWSTONE = new StructureStalactite(BlocksRegistry.GLOWSTONE_STALACTITE, Blocks.GLOWSTONE);
 	protected static final StructureStalactite STALAGMITE_BLACKSTONE = new StructureStalactite(BlocksRegistry.BLACKSTONE_STALACTITE, Blocks.BLACKSTONE, Blocks.BLACKSTONE, Blocks.NETHERRACK);
 	protected static final StructureStalactite STALAGMITE_BASALT = new StructureStalactite(BlocksRegistry.BASALT_STALACTITE, Blocks.BASALT, Blocks.BASALT, Blocks.NETHERRACK);
-
 	public NetherBiome(BiomeDefinition definition) {
 		definition.addMobSpawn(EntityRegistry.FIREFLY, 5, 2, 6);
 		definition.addMobSpawn(EntityRegistry.SKULL, 2, 2, 4);
@@ -280,6 +288,7 @@ public class NetherBiome extends ForgeRegistryEntry<NetherBiome> {
 			return (!useNoise || getFeatureNoise(pos, id) > noiseDensity) && random.nextFloat() < density;
 		}
 	}
+
 
 	protected class Subbiome {
 		NetherBiome biome;

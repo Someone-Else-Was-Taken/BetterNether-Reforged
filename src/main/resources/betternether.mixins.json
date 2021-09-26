@@ -10,7 +10,9 @@
     "ServerWorldMixin",
     "WorkbenchContainerMixin"
   ],
-  "client": ["ClientPlayNetHandlerMixin"],
+  "client": [
+    "ClientPlayNetHandlerMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

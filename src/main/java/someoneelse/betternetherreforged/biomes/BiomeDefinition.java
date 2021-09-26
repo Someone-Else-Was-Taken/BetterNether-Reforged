@@ -7,6 +7,8 @@ import com.google.common.collect.Lists;
 import net.minecraft.util.datafix.fixes.BiomeName;
 import net.minecraft.util.datafix.fixes.SpawnerEntityTypes;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.gen.feature.NoFeatureConfig;
+import net.minecraft.world.gen.feature.structure.Structure;
 import someoneelse.betternetherreforged.config.Configs;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -35,7 +37,9 @@ import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.registries.ForgeRegistries;
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.MHelper;
+import someoneelse.betternetherreforged.registry.ConfiguredStructureRegistry;
 import someoneelse.betternetherreforged.registry.EntityRegistry;
+import someoneelse.betternetherreforged.registry.StructureRegistry;
 
 
 public class BiomeDefinition {
@@ -340,6 +344,8 @@ public class BiomeDefinition {
 				.withMobSpawnSettings(spawnSettings.copy())
 				.withGenerationSettings(generationSettings.build())
 				.build();
+
+
 	}
 
 
@@ -347,8 +353,10 @@ public class BiomeDefinition {
 		generationSettings.withStructure(StructureFeatures.RUINED_PORTAL_NETHER);
 		generationSettings.withStructure(StructureFeatures.FORTRESS);
 		generationSettings.withStructure(StructureFeatures.BASTION_REMNANT);
+		//generationSettings.withStructure(ConfiguredStructureRegistry.CONFIGURED_NETHER_CITY);
 		generationSettings.withCarver(GenerationStage.Carving.AIR, ConfiguredCarvers.field_243772_f);
 		generationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SPRING_LAVA);
+
 	}
 
 	private void addDefaultFeatures(BiomeGenerationSettings.Builder generationSettings) {
@@ -371,6 +379,8 @@ public class BiomeDefinition {
 		spawnSettings.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.PIGLIN, 15, 4, 4));
 		spawnSettings.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.STRIDER, 60, 1, 2));
 	}
+
+
 
 	private static final class SpawnInfo {
 		EntityType<?> type;

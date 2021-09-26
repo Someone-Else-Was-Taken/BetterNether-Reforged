@@ -6,7 +6,15 @@ import java.util.List;
 import java.util.Random;
 
 
+import net.java.games.input.Component;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.settings.StructureSeparationSettings;
 import net.minecraftforge.common.world.StructureSpawnManager;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.biomes.NetherBiome;
 import someoneelse.betternetherreforged.blocks.BlockStalactite;
@@ -65,9 +73,9 @@ public class BNWorldGenerator {
 	protected static int biomeSizeY;
 	protected static boolean volumetric;
 
-	public static final CityFeature CITY = new CityFeature();
-	public static final StructureFeature<NoFeatureConfig, ? extends Structure<NoFeatureConfig>> CITY_CONFIGURED = CITY.withConfiguration(NoFeatureConfig.NO_FEATURE_CONFIG);
-	
+	public static final CityFeature NETHER_CITY = new CityFeature(NoFeatureConfig.field_236558_a_);
+	public static final StructureFeature<NoFeatureConfig, ? extends Structure<NoFeatureConfig>> CITY_CONFIGURED = NETHER_CITY.withConfiguration(NoFeatureConfig.field_236559_b_);
+
 	public static void onModInit() {
 		hasCleaningPass = Configs.GENERATOR.getBoolean("generator.world.terrain", "terrain_cleaning_pass", true);
 		hasFixPass = Configs.GENERATOR.getBoolean("generator.world.terrain", "world_fixing_pass", true);
@@ -86,9 +94,13 @@ public class BNWorldGenerator {
 		biomeSizeY = Configs.GENERATOR.getInt("generator_world", "biome_size_y", 40);
 		volumetric = Configs.GENERATOR.getBoolean("generator_world", "volumetric_biomes", true);
 
+		int distance = Configs.GENERATOR.getInt("generator.world.cities", "distance", 64);
+		int separation = distance >> 1;
+
 		Configs.GENERATOR.getBoolean("generator.world.cities", "generate", true);
 
 	}
+
 
 	public static void init(long seed) {
 		caves = new StructureCaves(seed);

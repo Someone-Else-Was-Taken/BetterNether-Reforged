@@ -11,10 +11,12 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.IServerWorld;
+import net.minecraft.world.gen.feature.template.BlockIgnoreStructureProcessor;
 import net.minecraft.world.gen.feature.template.PlacementSettings;
 import net.minecraft.world.gen.feature.template.StructureProcessor;
 import net.minecraft.world.gen.feature.template.Template;
 import net.minecraft.world.gen.feature.template.Template.BlockInfo;
+import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.structures.StructureNBT;
 
 
@@ -91,14 +93,25 @@ public class StructureCityBuilding extends StructureNBT {
 		}
 	}
 
-	public void placeInChunk(IServerWorld world, BlockPos pos, MutableBoundingBox boundingBox, StructureProcessor paletteProcessor) {
+	public boolean placeInChunk(IServerWorld world, BlockPos pos, MutableBoundingBox boundingBox, StructureProcessor paletteProcessor) {
+		if(structure == null)
+		{
+			System.out.println("No template: " + location.toString());
+			return false;
+		}
+
+		BetterNether.LOGGER.debug("CityBuildingStructure: Placing in chunk: " + location);
 		BlockPos p = pos.add(rotationOffset);
-		structure.func_237144_a_(world, p, new PlacementSettings()
-				.setRotation(rotation)
-				.setMirror(mirror)
-				.setBoundingBox(boundingBox)
-				.addProcessor(paletteProcessor),
+		PlacementSettings placementsettings =
+				new PlacementSettings()
+						.setRotation(rotation)
+						.setMirror(mirror)
+						.setBoundingBox(boundingBox)
+						.addProcessor(BlockIgnoreStructureProcessor.AIR_AND_STRUCTURE_BLOCK);
+		structure.func_237144_a_(world, p,
+				placementsettings,
 				world.getRandom());
+		return true;
 	}
 
 	public BlockPos[] getEnds() {

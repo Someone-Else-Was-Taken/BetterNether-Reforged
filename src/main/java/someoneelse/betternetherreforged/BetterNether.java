@@ -1,10 +1,19 @@
 package someoneelse.betternetherreforged;
 
 
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.Structure;
+import net.minecraft.world.gen.settings.StructureSeparationSettings;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 import someoneelse.betternetherreforged.biomes.NetherBiome;
 import someoneelse.betternetherreforged.blocks.BNRenderLayer;
 import someoneelse.betternetherreforged.client.IRenderTypeable;
@@ -79,10 +88,20 @@ public class BetterNether
     	BNWorldGenerator.onModInit();
     	BrewingRegistry.register();
     	Config.save();
-    	
+		//StructureRegistry.registerCity();
+		StructureRegistry.STRUCTURES.register(modEventBus);
+		StructureRegistry.FEATURES.register(modEventBus);
+
     	NetherTags.init();
     	
     	NetherBiomeProvider.register();
+		CityRegistry.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
+
+		IEventBus forgeBus = MinecraftForge.EVENT_BUS;
+
+		// The comments for BiomeLoadingEvent and StructureSpawnListGatherEvent says to do HIGH for additions.
+		forgeBus.addListener(EventPriority.HIGH, this::biomeModification);
+
     }
     
     private void clientSetup(FMLClientSetupEvent e) {
@@ -92,6 +111,9 @@ public class BetterNether
     }
     
     private void commonSetup(FMLCommonSetupEvent e) {
+		StructurePieceRegistry.init();
+		CityRegistry.setupStructures();
+		//ConfiguredStructureRegistry.registerConfiguredStructures();
     	ItemRecipes.register();
     }
     
@@ -139,5 +161,23 @@ public class BetterNether
 
 	public static float getFogEnd() {
 		return fogEnd;
+	}
+
+	@SubscribeEvent
+	public void biomeModification(final BiomeLoadingEvent event) {
+		event.getGeneration().getStructures().add(() -> ConfiguredStructureRegistry.CONFIGURED_CITY);
+	}
+
+	public static <T extends IForgeRegistryEntry<T>> T register(IForgeRegistry<T> registry, T entry, String registryKey)
+	{
+		entry.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, registryKey));
+		registry.register(entry);
+		return entry;
+	}
+
+	@SubscribeEvent
+	public static void registerStructures(RegistryEvent.Register<Structure<?>> event)
+	{
+		ConfiguredStructureRegistry.registerConfiguredStructures();
 	}
 }

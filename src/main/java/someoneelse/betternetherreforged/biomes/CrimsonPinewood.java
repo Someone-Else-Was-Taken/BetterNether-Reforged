@@ -8,9 +8,11 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.biome.ParticleEffectAmbience;
+import net.minecraft.world.gen.feature.NoFeatureConfig;
 import someoneelse.betternetherreforged.BlocksHelper;
 import someoneelse.betternetherreforged.MHelper;
 import someoneelse.betternetherreforged.noise.OpenSimplexNoise;
+import someoneelse.betternetherreforged.registry.ConfiguredStructureRegistry;
 import someoneelse.betternetherreforged.registry.EntityRegistry;
 import someoneelse.betternetherreforged.structures.StructureType;
 import someoneelse.betternetherreforged.structures.plants.StructureCrimsonFungus;
@@ -21,6 +23,7 @@ import someoneelse.betternetherreforged.structures.plants.StructureWallMoss;
 import someoneelse.betternetherreforged.structures.plants.StructureWallRedMushroom;
 import someoneelse.betternetherreforged.structures.plants.StructureWartBush;
 import someoneelse.betternetherreforged.structures.plants.StructureWartSeed;
+import someoneelse.betternetherreforged.world.structures.CityFeature;
 
 public class CrimsonPinewood extends NetherBiome {
 	private static final OpenSimplexNoise TERRAIN = new OpenSimplexNoise(614);
@@ -31,6 +34,7 @@ public class CrimsonPinewood extends NetherBiome {
 				.setLoop(SoundEvents.AMBIENT_CRIMSON_FOREST_LOOP)
 				.setAdditions(SoundEvents.AMBIENT_CRIMSON_FOREST_ADDITIONS)
 				.setMood(SoundEvents.AMBIENT_CRIMSON_FOREST_MOOD)
+				//.addStructureFeature(ConfiguredStructureRegistry.CONFIGURED_NETHER_CITY)
 				.setParticleConfig(new ParticleEffectAmbience(ParticleTypes.CRIMSON_SPORE, 0.025F))
 				.addMobSpawn(EntityRegistry.FLYING_PIG, 20, 2, 4));
 		addStructure("crimson_pinewood", new StructureCrimsonPinewood(), StructureType.FLOOR, 0.2F, false);

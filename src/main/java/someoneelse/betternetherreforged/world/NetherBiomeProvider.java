@@ -1,10 +1,13 @@
 package someoneelse.betternetherreforged.world;
 
 import java.util.List;
+import java.util.function.Supplier;
+
 import com.google.common.collect.Lists;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
+import net.minecraft.world.gen.feature.StructureFeature;
 import someoneelse.betternetherreforged.biomes.NetherBiome;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
@@ -13,6 +16,8 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.provider.BiomeProvider;
 import someoneelse.betternetherreforged.BetterNether;
+import someoneelse.betternetherreforged.config.Configs;
+//import someoneelse.betternetherreforged.mixin.GenerationSettingsAccessor;
 import someoneelse.betternetherreforged.registry.NetherBiomesRegistry;
 
 public class NetherBiomeProvider extends BiomeProvider {
@@ -33,16 +38,8 @@ public class NetherBiomeProvider extends BiomeProvider {
 		this.map = new BiomeMap(seed, BNWorldGenerator.biomeSizeXZ, BNWorldGenerator.biomeSizeY, BNWorldGenerator.volumetric);
 		this.biomeRegistry = biomeRegistry;
 		NetherBiomesRegistry.mapBiomes(biomeRegistry);
-		/*
-		if (Configs.GENERATOR.getBoolean("generator.world.cities", "generate", true)) {
-			this.biomes.forEach((biome) -> {
-				GenerationSettingsAccessor accessor = (GenerationSettingsAccessor) biome.getGenerationSettings();
-				List<Supplier<StructureFeature<?, ?>>> structures = Lists.newArrayList(accessor.getStructureFeatures());
-				structures.add(() -> { return BNWorldGenerator.CITY_CONFIGURED; });
-				accessor.setStructureFeatures(structures);
-			});
-		}
-		*/
+
+
 	}
 	
 	private static List<Biome> getBiomes(Registry<Biome> biomeRegistry) {

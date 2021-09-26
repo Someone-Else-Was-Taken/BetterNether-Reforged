@@ -46,11 +46,14 @@ public class BuildingStructureProcessor extends StructureProcessor {
 	public BlockInfo process(IWorldReader worldView, BlockPos pos, BlockPos blockPos, BlockInfo structureBlockInfo, BlockInfo structureBlockInfo2, PlacementSettings structurePlacementData, Template template) {
 		BlockState state = structureBlockInfo.state;
 
+
 		if (state.isAir())
 			return structureBlockInfo2;
 
 		Block block = state.getBlock();
 		String name = ForgeRegistries.BLOCKS.getKey(block).getPath();
+		//BetterNether.LOGGER.debug("world.gen.feature.city.BuildingStructureProcessor: registry name : " + name);
+
 
 		if (name.startsWith("roof_tile")) {
 			if (block instanceof StairsBlock) {
