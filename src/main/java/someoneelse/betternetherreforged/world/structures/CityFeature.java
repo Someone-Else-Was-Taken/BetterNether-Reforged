@@ -38,8 +38,9 @@ public class CityFeature extends Structure<NoFeatureConfig> {
 		super(NoFeatureConfig.field_236558_a_);
 	}
 
-	private static final CityGenerator PIECES = new CityGenerator();
-
+	public static void initGenerator() {
+		generator = new CityGenerator();
+	}
 	@Override
 	public IStartFactory<NoFeatureConfig> getStartFactory() {
 		return CityFeature.Start::new;
@@ -68,7 +69,7 @@ public class CityFeature extends Structure<NoFeatureConfig> {
 			BlockPos center = new BlockPos(px, y, pz);
 
 			//CityPalette citypalette = Palettes.getRandom(this.rand);
-			List<CityPiece> buildings = PIECES.generate(center, this.rand, Palettes.EMPTY);
+			List<CityPiece> buildings = generator.generate(center, this.rand, Palettes.EMPTY);
 			MutableBoundingBox cityBox = MutableBoundingBox.getNewBoundingBox();
 			for (CityPiece p: buildings)
 				cityBox.expandTo(p.getBoundingBox());

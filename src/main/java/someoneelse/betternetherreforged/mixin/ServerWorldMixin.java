@@ -27,6 +27,6 @@ public class ServerWorldMixin {
 	private void onInit(MinecraftServer server, Executor workerExecutor, SaveFormat.LevelSave session, IServerWorldInfo properties, RegistryKey<World> registryKey, DimensionType dimensionType,
 			IChunkStatusListener worldGenerationProgressListener, ChunkGenerator chunkGenerator, boolean bl, long seed, List<ISpecialSpawner> list, boolean bl2, CallbackInfo info) {
 		BNWorldGenerator.init(seed);
-		//CityFeature.initGenerator();
+		CityFeature.initGenerator();
 	}
 }
