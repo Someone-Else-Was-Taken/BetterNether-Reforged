@@ -12,5 +12,6 @@ public class StructurePieceRegistry {
 
     public static void init() {
         //IStructurePieceType NETHER_CITY = IStructurePieceType.register(CityPiece::new, "bncity");
+
     }
 }

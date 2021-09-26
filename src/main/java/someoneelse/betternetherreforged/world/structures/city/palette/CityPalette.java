@@ -6,6 +6,7 @@ import java.util.Random;
 
 import someoneelse.betternetherreforged.blocks.BlockPottedPlant;
 import someoneelse.betternetherreforged.blocks.BlockSmallLantern;
+import someoneelse.betternetherreforged.blocks.BlockPottedPlant.PottedPlantShape;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
@@ -528,6 +529,6 @@ public class CityPalette {
 	public BlockState getPlant(BlockState input) {
 		String seed = ForgeRegistries.BLOCKS.getKey(input.getBlock()).getPath();
 		RANDOM.setSeed(seed.hashCode());
-		return BlocksRegistry.POTTED_PLANT.getDefaultState().with(BlockPottedPlant.PLANT, BlockPottedPlant.PottedPlantShape.values()[RANDOM.nextInt(BlockPottedPlant.PottedPlantShape.values().length)]);
+		return BlocksRegistry.POTTED_PLANT.getDefaultState().with(BlockPottedPlant.PLANT, PottedPlantShape.values()[RANDOM.nextInt(PottedPlantShape.values().length)]);
 	}
 }

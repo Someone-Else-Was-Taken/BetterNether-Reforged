@@ -19,7 +19,6 @@ import net.minecraft.world.gen.feature.template.Template.BlockInfo;
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.structures.StructureNBT;
 
-
 public class StructureCityBuilding extends StructureNBT {
 	protected static final BlockState AIR = Blocks.AIR.getDefaultState();
 
@@ -93,18 +92,14 @@ public class StructureCityBuilding extends StructureNBT {
 		}
 	}
 
-	public boolean placeInChunk(IServerWorld world, BlockPos pos, MutableBoundingBox boundingBox, StructureProcessor paletteProcessor) {
+	public void placeInChunk(IServerWorld world, BlockPos pos, MutableBoundingBox boundingBox, StructureProcessor paletteProcessor) {
 		BlockPos p = pos.add(rotationOffset);
-		PlacementSettings placementsettings =
-				new PlacementSettings()
+		structure.func_237144_a_(world, p, new PlacementSettings()
 						.setRotation(rotation)
 						.setMirror(mirror)
 						.setBoundingBox(boundingBox)
-						.addProcessor(BlockIgnoreStructureProcessor.AIR_AND_STRUCTURE_BLOCK);
-		structure.func_237144_a_(world, p,
-				placementsettings,
+						.addProcessor(paletteProcessor),
 				world.getRandom());
-		return true;
 	}
 
 	public BlockPos[] getEnds() {

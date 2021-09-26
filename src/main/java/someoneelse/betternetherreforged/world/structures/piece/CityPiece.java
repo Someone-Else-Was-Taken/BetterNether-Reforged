@@ -29,12 +29,8 @@ import someoneelse.betternetherreforged.world.structures.city.StructureCityBuild
 import someoneelse.betternetherreforged.world.structures.city.palette.CityPalette;
 import someoneelse.betternetherreforged.world.structures.city.palette.Palettes;
 
-
 public class CityPiece extends CustomPiece {
 	private static final Mutable POS = new Mutable();
-
-
-
 
 	private StructureProcessor paletteProcessor;
 	private StructureCityBuilding building;
@@ -46,39 +42,35 @@ public class CityPiece extends CustomPiece {
 		this.building = building;
 		this.pos = pos.toImmutable();
 		this.boundingBox = building.getBoundingBox(pos);
-		//this.palette = palette;
-		//this.paletteProcessor = new BuildingStructureProcessor(palette);
+		this.palette = palette;
+		this.paletteProcessor = new BuildingStructureProcessor(palette);
 	}
 
-	public CityPiece(TemplateManager manager, CompoundNBT tag) {
+	protected CityPiece(TemplateManager manager, CompoundNBT tag) {
 		super(StructureTypes.NETHER_CITY, tag);
 		this.building = new StructureCityBuilding(tag.getString("building"), tag.getInt("offset"));
 		this.building = this.building.getRotated(Rotation.values()[tag.getInt("rotation")]);
 		this.building.setMirror(Mirror.values()[tag.getInt("mirror")]);
 		this.pos = NBTUtil.readBlockPos(tag.getCompound("pos"));
 		this.boundingBox = building.getBoundingBox(pos);
-		//this.palette = Palettes.getPalette(tag.getString("palette"));
-		//this.paletteProcessor = new BuildingStructureProcessor(palette);
+		this.palette = Palettes.getPalette(tag.getString("palette"));
+		this.paletteProcessor = new BuildingStructureProcessor(palette);
 	}
 
-
-
-
 	@Override
-	public void readAdditional(CompoundNBT tag) {
+	protected void readAdditional(CompoundNBT tag) {
 		tag.putString("building", building.getName());
 		tag.putInt("rotation", building.getRotation().ordinal());
 		tag.putInt("mirror", building.getMirror().ordinal());
 		tag.putInt("offset", building.getYOffset());
 		tag.put("pos", NBTUtil.writeBlockPos(pos));
-		//tag.putString("palette", palette.getName());
+		tag.putString("palette", palette.getName());
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public boolean func_230383_a_(ISeedReader world, StructureManager arg, ChunkGenerator chunkGenerator, Random random, MutableBoundingBox blockBox, ChunkPos chunkPos, BlockPos blockPos) {
 		if (!this.boundingBox.intersectsWith(blockBox))
-			return false;
+			return true;
 
 		MutableBoundingBox clamped = new MutableBoundingBox(boundingBox);
 
@@ -91,21 +83,17 @@ public class CityPiece extends CustomPiece {
 		clamped.minZ = Math.max(clamped.minZ, blockBox.minZ);
 		clamped.maxZ = Math.min(clamped.maxZ, blockBox.maxZ);
 
-		boolean gen = building.placeInChunk(world, pos, clamped, paletteProcessor);
-
+		building.placeInChunk(world, pos, clamped, paletteProcessor);
 
 		IChunk chunk = world.getChunk(chunkPos.x, chunkPos.z);
 
 		BlockState state;
 		for (int x = clamped.minX; x <= clamped.maxX; x++)
-			for (int z = clamped.minZ; z <= clamped.maxZ; z++)
-			{
+			for (int z = clamped.minZ; z <= clamped.maxZ; z++) {
 				POS.setPos(x, clamped.minY, z);
 				state = world.getBlockState(POS);
-				if (!state.isAir() && state.hasOpaqueCollisionShape(world, POS))
-				{
-					for (int y = clamped.minY - 1; y > 4; y--)
-					{
+				if (!state.isAir() && state.hasOpaqueCollisionShape(world, POS)) {
+					for (int y = clamped.minY - 1; y > 4; y--) {
 						POS.setY(y);
 						BlocksHelper.setWithoutUpdate(world, POS, state);
 						if (BlocksHelper.isNetherGroundMagma(world.getBlockState(POS.down())))
@@ -113,14 +101,13 @@ public class CityPiece extends CustomPiece {
 					}
 				}
 
-				//POS.set(x - clamped.minX, clamped.minY - clamped.minZ, z);
-				for (int y = clamped.minY; y <= clamped.maxY; y++)
-				{
+				// POS.set(x - clamped.minX, clamped.minY - clamped.minZ, z);
+				for (int y = clamped.minY; y <= clamped.maxY; y++) {
 					POS.setY(y);
 					chunk.markBlockForPostprocessing(POS);
 				}
 			}
 
-		return gen;
+		return true;
 	}
 }

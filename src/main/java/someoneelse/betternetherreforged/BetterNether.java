@@ -181,7 +181,14 @@ public class BetterNether
 
 
 	public void biomeModification(final BiomeLoadingEvent event) {
-		event.getGeneration().getStructures().add(() -> ConfiguredStructureRegistry.CONFIGURED_CITY);
+		Biome.Category category = event.getCategory();
+		switch (category) {
+			case NETHER:
+				event.getGeneration().getStructures().add(() -> ConfiguredStructureRegistry.CONFIGURED_CITY);
+			default:
+				break;
+		}
+
 	}
 
 	public static <T extends IForgeRegistryEntry<T>> T register(IForgeRegistry<T> registry, T entry, String registryKey)

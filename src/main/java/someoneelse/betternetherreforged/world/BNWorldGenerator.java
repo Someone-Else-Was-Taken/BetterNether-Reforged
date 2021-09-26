@@ -74,7 +74,7 @@ public class BNWorldGenerator {
 	protected static int biomeSizeY;
 	protected static boolean volumetric;
 
-	public static final CityFeature CITY = new CityFeature(NoFeatureConfig.field_236558_a_);
+	public static final CityFeature CITY = new CityFeature();
 	public static final StructureFeature<NoFeatureConfig, ? extends Structure<NoFeatureConfig>> CITY_CONFIGURED = CITY.withConfiguration(NoFeatureConfig.field_236559_b_);
 
 
@@ -100,7 +100,7 @@ public class BNWorldGenerator {
 		int distance = Configs.GENERATOR.getInt("generator.world.cities", "distance", 64);
 		int separation = distance >> 1;
 
-	Configs.GENERATOR.getBoolean("generator.world.cities", "generate", true);
+		Configs.GENERATOR.getBoolean("generator.world.cities", "generate", true);
 
 
 

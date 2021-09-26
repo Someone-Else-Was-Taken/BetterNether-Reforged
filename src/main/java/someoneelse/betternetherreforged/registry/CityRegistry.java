@@ -44,7 +44,7 @@ public class CityRegistry {
      *   However, users might not know that and think you are to blame for issues that doesn't exist.
      *   So it is best to keep your structure names the same as long as you can instead of changing them frequently.
      */
-    public static final RegistryObject<Structure<NoFeatureConfig>> CITY = DEFERRED_REGISTRY_STRUCTURE.register("city", () -> (new CityFeature(NoFeatureConfig.field_236558_a_)));
+    public static final RegistryObject<Structure<NoFeatureConfig>> CITY = DEFERRED_REGISTRY_STRUCTURE.register("city", () -> (new CityFeature()));
 
     /**
      * This is where we set the rarity of your structures and determine if land conforms to it.
