@@ -187,17 +187,17 @@ public class EntityHydrogenJellyfish extends AnimalEntity implements IFlyingAnim
 	public void onDeath(DamageSource source) {
 		super.onDeath(source);
 		if (world.isRemote) {
-			float scale = getScale() * 3;
+			float scale = 3 * getScale();
 			for (int i = 0; i < 20; i++)
 				this.world.addParticle(ParticleTypes.EXPLOSION,
 						getPosX() + rand.nextGaussian() * scale,
-						getEyeHeight() + rand.nextGaussian() * scale,
+						getPosY() + rand.nextGaussian() * scale,
 						getPosZ() + rand.nextGaussian() * scale,
 						0, 0, 0);
 		}
 		else {
 			Explosion.Mode destructionType = this.world.getGameRules().getBoolean(GameRules.MOB_GRIEFING) ? Explosion.Mode.DESTROY : Explosion.Mode.NONE;
-			this.world.createExplosion(this, getPosX(), getEyeHeight(), getPosZ(), 7 * getScale(), destructionType);
+			this.world.createExplosion(this, getPosX(), getPosY(), getPosZ(), 7.0F * getScale(), destructionType);
 		}
 	}
 

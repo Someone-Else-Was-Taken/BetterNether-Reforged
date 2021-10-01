@@ -113,7 +113,8 @@ public class BetterNether
 		IEventBus forgeBus = MinecraftForge.EVENT_BUS;
 
 		// The comments for BiomeLoadingEvent and StructureSpawnListGatherEvent says to do HIGH for additions.
-		forgeBus.addListener(EventPriority.HIGH, this::biomeModification);
+
+		forgeBus.addListener(EventPriority.NORMAL, this::addDimensionalSpacing);
 
     }
     
@@ -238,7 +239,7 @@ public class BetterNether
 			 */
 			Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(serverWorld.getChunkProvider().generator.func_235957_b_().func_236195_a_());
 			tempMap.putIfAbsent(CityRegistry.CITY.get(), DimensionStructuresSettings.field_236191_b_.get(CityRegistry.CITY.get()));
-
+			serverWorld.getChunkProvider().generator.func_235957_b_().func_236195_a_().get(tempMap);
 		}
 	}
 

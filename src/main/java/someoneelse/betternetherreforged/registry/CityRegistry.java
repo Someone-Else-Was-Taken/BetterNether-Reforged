@@ -53,14 +53,12 @@ public class CityRegistry {
 
     public static void setupStructures() {
         setupMapSpacingAndLand(
-                CITY.get(), /* The instance of the structure */
-                new StructureSeparationSettings(16 /* average distance apart in chunks between spawn attempts */,
-                        16 >> 1 /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/,
-                        1234 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */),
+                CITY.get(),
+                new StructureSeparationSettings(64,
+                        64 >> 1,
+                        1234567890),
                 true);
 
-
-        //Add more structures here and so on
     }
 
     /**
@@ -77,12 +75,13 @@ public class CityRegistry {
 
         Structure.NAME_STRUCTURE_BIMAP.put(structure.getRegistryName().toString(), structure);
 
-        if (transformSurroundingLand) {
+        if(transformSurroundingLand){
             Structure.field_236384_t_ =
                     ImmutableList.<Structure<?>>builder()
                             .addAll(Structure.field_236384_t_)
                             .add(structure)
                             .build();
+        }
 
 
             DimensionStructuresSettings.field_236191_b_ =
@@ -112,6 +111,6 @@ public class CityRegistry {
                 }
             });
         }
-    }
+
 
 }

@@ -18,7 +18,7 @@ import someoneelse.betternetherreforged.world.structures.CityFeature;
 
 public class CityHelper {
 
-	private static final Set<ChunkPos> POSITIONS = new HashSet<ChunkPos>(16);
+	private static final Set<ChunkPos> POSITIONS = new HashSet<ChunkPos>(64);
 	private static final Mutable POS = new Mutable();
 
 	public static boolean stopStructGen(int chunkX, int chunkZ, ChunkGenerator chunkGenerator, long worldSeed, SharedSeedRandom chunkRandom) {
@@ -43,10 +43,10 @@ public class CityHelper {
 	}
 	
 	private static void collectNearby(ServerWorld world, int chunkX, int chunkZ, StructureSeparationSettings config, long worldSeed, SharedSeedRandom chunkRandom) {
-		int x1 = chunkX - 16;
-		int x2 = chunkX + 16;
-		int z1 = chunkZ - 16;
-		int z2 = chunkZ + 16;
+		int x1 = chunkX - 64;
+		int x2 = chunkX + 64;
+		int z1 = chunkZ - 64;
+		int z2 = chunkZ + 64;
 
 		POSITIONS.clear();
 		POS.setY(64);

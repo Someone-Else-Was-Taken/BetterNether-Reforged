@@ -167,6 +167,7 @@ public class ItemsRegistry {
 		return registerItem(name, new Item(defaultSettings().food(new Food.Builder().effect(() -> new EffectInstance(Effects.REGENERATION, ticks, power), 1).build())));
 	}
 
+
 	public static Item.Properties defaultSettings() {
 		return new Item.Properties().group(CreativeTab.BN_TAB);
 	}

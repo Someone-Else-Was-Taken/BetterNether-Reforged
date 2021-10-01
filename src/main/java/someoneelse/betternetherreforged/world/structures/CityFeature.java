@@ -31,7 +31,7 @@ public class CityFeature extends Structure<NoFeatureConfig> {
 
 	@Override
 	public GenerationStage.Decoration getDecorationStage() {
-		return GenerationStage.Decoration.RAW_GENERATION;
+		return GenerationStage.Decoration.STRONGHOLDS;
 	}
 
 	public CityFeature() {
@@ -44,10 +44,6 @@ public class CityFeature extends Structure<NoFeatureConfig> {
 	@Override
 	public IStartFactory<NoFeatureConfig> getStartFactory() {
 		return CityFeature.Start::new;
-	}
-
-	public String getStructureName() {
-		return "city";
 	}
 
 	public class Start extends StructureStart<NoFeatureConfig> {

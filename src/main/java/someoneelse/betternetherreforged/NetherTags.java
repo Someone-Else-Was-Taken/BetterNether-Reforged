@@ -21,6 +21,7 @@ public class NetherTags {
 		public static final IOptionalNamedTag<Block> NETHERRACK = tag("netherrack");
 		public static final IOptionalNamedTag<Block> MYCELIUM = tag("nether_mycelium");
 		public static final IOptionalNamedTag<Block> NYLIUM = tag("nylium");
+        public static final IOptionalNamedTag<Block> OTHER_NETHER_GROUND = tag("other_nether_ground");
 		
         private static IOptionalNamedTag<Block> tag(String name)
         {

@@ -1,5 +1,6 @@
 package someoneelse.betternetherreforged.biomes;
 
+import java.sql.Struct;
 import java.util.List;
 
 import com.google.common.collect.Lists;

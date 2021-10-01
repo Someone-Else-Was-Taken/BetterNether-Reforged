@@ -3,6 +3,7 @@ package someoneelse.betternetherreforged.registry;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.util.registry.Registry;
 import someoneelse.betternetherreforged.BetterNether;
 import someoneelse.betternetherreforged.blocks.complex.ColoredGlassMaterial;
 import someoneelse.betternetherreforged.blocks.complex.WoodenMaterial;

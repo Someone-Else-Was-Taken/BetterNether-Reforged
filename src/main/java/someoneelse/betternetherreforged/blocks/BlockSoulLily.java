@@ -36,16 +36,16 @@ import someoneelse.betternetherreforged.structures.plants.StructureSoulLily;
 public class BlockSoulLily extends BlockBaseNotFull {
 	public static final EnumProperty<SoulLilyShape> SHAPE = EnumProperty.create("shape", SoulLilyShape.class);
 
-	private static final VoxelShape SHAPE_SMALL = makeCuboidShape(6, 0, 6, 10, 16, 10);
-	private static final VoxelShape SHAPE_MEDIUM_BOTTOM = makeCuboidShape(5, 0, 5, 11, 16, 11);
-	private static final VoxelShape SHAPE_MEDIUM_TOP = makeCuboidShape(0, 0, 0, 16, 3, 16);
-	private static final VoxelShape SHAPE_BIG_BOTTOM = makeCuboidShape(3, 0, 3, 13, 16, 13);
-	private static final VoxelShape SHAPE_BIG_MIDDLE = makeCuboidShape(6, 0, 6, 10, 16, 10);
-	private static final VoxelShape SHAPE_BIG_TOP_CENTER = makeCuboidShape(0, 0, 0, 16, 4, 16);
-	private static final VoxelShape SHAPE_BIG_TOP_SIDE_N = makeCuboidShape(0, 4, 0, 16, 6, 8);
-	private static final VoxelShape SHAPE_BIG_TOP_SIDE_S = makeCuboidShape(0, 4, 8, 16, 6, 16);
-	private static final VoxelShape SHAPE_BIG_TOP_SIDE_E = makeCuboidShape(8, 4, 0, 16, 6, 16);
-	private static final VoxelShape SHAPE_BIG_TOP_SIDE_W = makeCuboidShape(0, 4, 0, 8, 6, 16);
+	private static final VoxelShape SHAPE_SMALL = Block.makeCuboidShape(6, 0, 6, 10, 16, 10);
+	private static final VoxelShape SHAPE_MEDIUM_BOTTOM = Block.makeCuboidShape(5, 0, 5, 11, 16, 11);
+	private static final VoxelShape SHAPE_MEDIUM_TOP = Block.makeCuboidShape(0, 0, 0, 16, 3, 16);
+	private static final VoxelShape SHAPE_BIG_BOTTOM = Block.makeCuboidShape(3, 0, 3, 13, 16, 13);
+	private static final VoxelShape SHAPE_BIG_MIDDLE = Block.makeCuboidShape(6, 0, 6, 10, 16, 10);
+	private static final VoxelShape SHAPE_BIG_TOP_CENTER = Block.makeCuboidShape(0, 0, 0, 16, 4, 16);
+	private static final VoxelShape SHAPE_BIG_TOP_SIDE_N = Block.makeCuboidShape(0, 4, 0, 16, 6, 8);
+	private static final VoxelShape SHAPE_BIG_TOP_SIDE_S = Block.makeCuboidShape(0, 4, 8, 16, 6, 16);
+	private static final VoxelShape SHAPE_BIG_TOP_SIDE_E = Block.makeCuboidShape(8, 4, 0, 16, 6, 16);
+	private static final VoxelShape SHAPE_BIG_TOP_SIDE_W = Block.makeCuboidShape(0, 4, 0, 8, 6, 16);
 
 	private static final StructureSoulLily STRUCTURE = new StructureSoulLily();
 

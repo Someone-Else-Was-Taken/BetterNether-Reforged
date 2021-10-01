@@ -57,7 +57,7 @@ public class BlocksHelper {
 	}
 
 	public static boolean isNetherGround(BlockState state) {
-		return isNetherrack(state) || isSoulSand(state) || isNetherMycelium(state) || isNylium(state);
+		return isOtherNetherGround(state) || isNetherrack(state) || isSoulSand(state) || isNetherMycelium(state) || isNylium(state);
 		// return state.isIn(NetherTags.NETHER_GROUND);
 	}
 
@@ -147,4 +147,9 @@ public class BlocksHelper {
 	public static boolean isNylium(BlockState state) {
 		return state.isIn(NetherTags.Blocks.NYLIUM);
 	}
+
+	public static boolean isOtherNetherGround(BlockState state) {
+		return state.isIn(NetherTags.Blocks.OTHER_NETHER_GROUND);
+	}
+
 }
