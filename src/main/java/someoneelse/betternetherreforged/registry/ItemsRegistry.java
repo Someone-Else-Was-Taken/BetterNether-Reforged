@@ -119,7 +119,7 @@ public class ItemsRegistry {
 
 	public static void registerAll(RegistryEvent.Register<Item> e) {
 		IForgeRegistry<Item> r = e.getRegistry();
-		
+
 		for (Pair<String, Item> item : MODITEMS) {
 			r.register(item.getRight().setRegistryName(new ResourceLocation(BetterNether.MOD_ID, item.getLeft())));
 		}
