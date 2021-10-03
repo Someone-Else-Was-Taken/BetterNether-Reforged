@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.registries.ForgeRegistries;
 import someoneelse.betternetherreforged.registry.BlocksRegistry;
 import someoneelse.betternetherreforged.registry.ItemsRegistry;
@@ -58,10 +59,10 @@ public class ItemRecipes {
 	}
 
 	private static boolean itemExists(Item item) {
-		return ForgeRegistries.ITEMS.getKey(item) != ForgeRegistries.ITEMS.getDefaultKey();
+		return Registry.ITEM.getKey(item) != Registry.ITEM.getDefaultKey();
 	}
 
 	private static boolean blockExists(Block block) {
-		return ForgeRegistries.BLOCKS.getKey(block) != ForgeRegistries.BLOCKS.getDefaultKey();
+		return Registry.BLOCK.getKey(block) != Registry.BLOCK.getDefaultKey();
 	}
 }
