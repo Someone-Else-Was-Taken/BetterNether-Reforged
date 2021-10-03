@@ -522,17 +522,17 @@ public class BlocksRegistry {
 	}
 
 	public static Block registerBlock(String name, Block block) {
-		if (Configs.BLOCKS.getBoolean("blocks", name, true)) {
-			registerBlockDirectly(name, block);
-		}
+		//if (Configs.BLOCKS.getBoolean("blocks", name, true)) {
+		//	registerBlockDirectly(name, block);
+		//}
 		registerBlockDirectly(name, block);
 		return block;
 	}
 
 	public static Block registerBlockNI(String name, Block block) {
-		if (Configs.BLOCKS.getBoolean("blocks", name, true)) {
-			Registry.register(Registry.BLOCK, new ResourceLocation(BetterNether.MOD_ID, name), block);
-		}
+		//if (Configs.BLOCKS.getBoolean("blocks", name, true)) {
+		//	Registry.register(Registry.BLOCK, new ResourceLocation(BetterNether.MOD_ID, name), block);
+		//}
 		block.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, name));
 		BLOCKS.add(block);
 		return block;
