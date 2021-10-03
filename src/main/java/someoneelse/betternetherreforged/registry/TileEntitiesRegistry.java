@@ -18,12 +18,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
-import someoneelse.betternetherreforged.tileentities.BNBarrelTileEntity;
-import someoneelse.betternetherreforged.tileentities.BNChestTileEntity;
-import someoneelse.betternetherreforged.tileentities.BNSignTileEntity;
-import someoneelse.betternetherreforged.tileentities.TileEntityChestOfDrawers;
-import someoneelse.betternetherreforged.tileentities.TileEntityForge;
-import someoneelse.betternetherreforged.tileentities.TileEntityFurnace;
+import someoneelse.betternetherreforged.tileentities.*;
 
 public class TileEntitiesRegistry {
 	
@@ -34,7 +29,7 @@ public class TileEntitiesRegistry {
 	public static final TileEntityType<?> CINCINNASITE_FORGE = registerTileEntity("forge", TileEntityType.Builder.create(TileEntityForge::new, BlocksRegistry.CINCINNASITE_FORGE).build(null));
 	public static final TileEntityType<?> NETHERRACK_FURNACE = registerTileEntity("furnace",TileEntityType.Builder.create(TileEntityFurnace::new, getFurnaces()).build(null));
 	public static final TileEntityType<?> CHEST_OF_DRAWERS = registerTileEntity("chest_of_drawers",TileEntityType.Builder.create(TileEntityChestOfDrawers::new, BlocksRegistry.CHEST_OF_DRAWERS).build(null));
-	//public static final TileEntityType<?> NETHER_BREWING_STAND = registerTileEntity("nether_brewing_stand",TileEntityType.Builder.create(BNBrewingStandTileEntity::new, BlocksRegistry.NETHER_BREWING_STAND).build(null));
+	public static final TileEntityType<?> NETHER_BREWING_STAND = registerTileEntity("nether_brewing_stand",TileEntityType.Builder.create(BNBrewingStandTileEntity::new, BlocksRegistry.NETHER_BREWING_STAND).build(null));
 	public static final TileEntityType<BNChestTileEntity> CHEST = registerTileEntity("chest",TileEntityType.Builder.create(BNChestTileEntity::new, getChests()).build(null));
 	public static final TileEntityType<BNBarrelTileEntity> BARREL = registerTileEntity("barrel",TileEntityType.Builder.create(BNBarrelTileEntity::new, getBarrels()).build(null));
 	public static final TileEntityType<BNSignTileEntity> SIGN = registerTileEntity("sign",TileEntityType.Builder.create(BNSignTileEntity::new, getSigns()).build(null));
