@@ -115,6 +115,7 @@ public class BetterNether
 		// The comments for BiomeLoadingEvent and StructureSpawnListGatherEvent says to do HIGH for additions.
 
 		forgeBus.addListener(EventPriority.NORMAL, this::addDimensionalSpacing);
+		forgeBus.addListener(EventPriority.HIGH, this::biomeModification);
 
     }
     
