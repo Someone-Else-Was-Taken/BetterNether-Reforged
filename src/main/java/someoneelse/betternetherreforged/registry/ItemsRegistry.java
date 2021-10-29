@@ -121,7 +121,11 @@ public class ItemsRegistry {
 		IForgeRegistry<Item> r = e.getRegistry();
 
 		for (Pair<String, Item> item : MODITEMS) {
-			r.register(item.getRight().setRegistryName(new ResourceLocation(BetterNether.MOD_ID, item.getLeft())));
+			if(Configs.ITEMS.getBoolean("items", item.getLeft(), true) && item.getRight() != Items.AIR)
+			{
+				r.register(item.getRight().setRegistryName(new ResourceLocation(BetterNether.MOD_ID, item.getLeft())));
+
+			}
 		}
 	}
 
@@ -173,6 +177,7 @@ public class ItemsRegistry {
 	}
 
 	private static Item makeEgg(String name, EntityType<?> type, int background, int dots) {
+		if (Configs.MOBS.getBoolean("mobs", name, true)) {
 			SpawnEggItem item = new SpawnEggItem(type, background, dots, defaultSettings());
 			DefaultDispenseItemBehavior behavior = new DefaultDispenseItemBehavior() {
 				public ItemStack dispenseSilently(IBlockSource pointer, ItemStack stack) {
@@ -185,6 +190,10 @@ public class ItemsRegistry {
 			};
 			DispenserBlock.registerDispenseBehavior(item, behavior);
 			return item;
+		}
+		else {
+			return Items.AIR;
+		}
 	}
 
 	private static int color(int r, int g, int b) {
