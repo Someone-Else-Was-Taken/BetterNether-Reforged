@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "betternether",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "result": {
+    "item": "betternether:netherrack_stalactite"
+  }
+}

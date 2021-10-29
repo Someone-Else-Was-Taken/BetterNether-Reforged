@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "betternether",
+  "ingredients": [
+    {
+      "item": "betternether:mushroom_stem"
+    }
+  ],
+  "result": {
+    "item": "betternether:mushroom_planks",
+    "count": 2
+  }
+}

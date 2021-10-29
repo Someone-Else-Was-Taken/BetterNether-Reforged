@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "betternether",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "betternether:soul_sandstone_cut"
+    }
+  },
+  "result": {
+    "item": "betternether:soul_sandstone_smooth",
+    "count": 4
+  }
+}

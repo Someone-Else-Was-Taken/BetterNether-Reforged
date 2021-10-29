@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "betternether",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "betternether:basalt_bricks"
+    }
+  },
+  "result": {
+    "item": "betternether:basalt_bricks_slab",
+    "count": 6
+  }
+}

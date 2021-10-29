@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "betternether",
+  "pattern": [
+    "##",
+    "II"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:acacia_slab"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "betternether:taburet_acacia"
+  }
+}

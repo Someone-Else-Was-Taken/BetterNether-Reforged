@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "betternether",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "betternether:stalagnate_planks"
+    },
+    "S": {
+      "item": "betternether:stalagnate_planks_slab"
+    }
+  },
+  "result": {
+    "item": "betternether:barrel_stalagnate"
+  }
+}
