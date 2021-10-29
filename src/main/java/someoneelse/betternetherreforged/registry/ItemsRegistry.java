@@ -115,7 +115,7 @@ public class ItemsRegistry {
 	public static final Item AGAVE_LEAF = registerItem("agave_leaf", new Item(defaultSettings()));
 	public static final Item AGAVE_MEDICINE = registerMedicine("agave_medicine", 40, 2, true);
 	public static final Item HERBAL_MEDICINE = registerMedicine("herbal_medicine", 10, 5, true);
-	
+
 
 	public static void registerAll(RegistryEvent.Register<Item> e) {
 		IForgeRegistry<Item> r = e.getRegistry();
@@ -173,7 +173,6 @@ public class ItemsRegistry {
 	}
 
 	private static Item makeEgg(String name, EntityType<?> type, int background, int dots) {
-		if (Configs.MOBS.getBoolean("mobs", name, true)) {
 			SpawnEggItem item = new SpawnEggItem(type, background, dots, defaultSettings());
 			DefaultDispenseItemBehavior behavior = new DefaultDispenseItemBehavior() {
 				public ItemStack dispenseSilently(IBlockSource pointer, ItemStack stack) {
@@ -186,10 +185,6 @@ public class ItemsRegistry {
 			};
 			DispenserBlock.registerDispenseBehavior(item, behavior);
 			return item;
-		}
-		else {
-			return Items.AIR;
-		}
 	}
 
 	private static int color(int r, int g, int b) {

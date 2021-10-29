@@ -137,13 +137,27 @@ public class EntityRegistry {
 	public static void registerAll(RegistryEvent.Register<EntityType<?>> evt) {
 		IForgeRegistry<EntityType<?>> r = evt.getRegistry();
 		r.register(CHAIR.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "chair")));
+		if (Configs.MOBS.getBoolean("mobs", "naga", true)) {
 		r.register(NAGA_PROJECTILE.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "naga_projectile")));
+		}
+		if (Configs.MOBS.getBoolean("mobs", "firefly", true)) {
 		r.register(FIREFLY.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "firefly")));
-		r.register(NAGA.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "naga")));
-		r.register(FLYING_PIG.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "flying_pig")));
+		}
+		if (Configs.MOBS.getBoolean("mobs", "naga", true)) {
+			r.register(NAGA.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "naga")));
+		}
+		if (Configs.MOBS.getBoolean("mobs", "flying_pig", true)) {
+			r.register(FLYING_PIG.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "flying_pig")));
+		}
+		if (Configs.MOBS.getBoolean("mobs", "jungle_skeleton", true)) {
 		r.register(JUNGLE_SKELETON.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "jungle_skeleton")));
-		r.register(HYDROGEN_JELLYFISH.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "hydrogen_jellyfish")));
-		r.register(SKULL.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "skull")));
+		}
+		if (Configs.MOBS.getBoolean("mobs", "hydrogen_jellyfish", true)) {
+			r.register(HYDROGEN_JELLYFISH.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "hydrogen_jellyfish")));
+		}
+		if (Configs.MOBS.getBoolean("mobs", "skull", true)) {
+			r.register(SKULL.setRegistryName(new ResourceLocation(BetterNether.MOD_ID, "skull")));
+		}
 
 		registerEntityAttributes();
 		registerSpawnPlacementData();
@@ -181,8 +195,10 @@ public class EntityRegistry {
 
 
     public static void registerEntity(String name, EntityType<? extends LivingEntity> entity) {
-        Registry.register(Registry.ENTITY_TYPE, new ResourceLocation(BetterNether.MOD_ID, name), entity);
-        ATTRIBUTES.put(entity, MobEntity.registerAttributes().create());
+		if (Configs.MOBS.getBoolean("mobs", name, true)) {
+			Registry.register(Registry.ENTITY_TYPE, new ResourceLocation(BetterNether.MOD_ID, name), entity);
+			ATTRIBUTES.put(entity, MobEntity.registerAttributes().create());
+		}
     }
 
     public static void registerEntity(String name, EntityType<? extends LivingEntity> entity, AttributeModifierMap container) {
