@@ -3,6 +3,7 @@ package someoneelse.betternetherreforged.mixin;
 import java.util.List;
 import java.util.concurrent.Executor;
 
+import someoneelse.betternetherreforged.registry.NetherBiomesRegistry;
 import someoneelse.betternetherreforged.world.structures.CityFeature;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

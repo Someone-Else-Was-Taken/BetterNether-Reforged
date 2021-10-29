@@ -93,6 +93,7 @@ public class BetterNether
     	modEventBus.addGenericListener(NetherBiome.class, NetherBiomesRegistry::registerNetherBiomes);
     	modEventBus.addGenericListener(Biome.class, NetherBiomesRegistry::registerBiomes);
 
+
     	//StructureRegistry.DEFERRED_FEATURES.register(modEventBus);
     	//StructureRegistry.DEFERRED_STRUCTURES.register(modEventBus);
     	NetherBiomesRegistry.init();
@@ -107,7 +108,7 @@ public class BetterNether
 
     	NetherTags.init();
     	
-    	NetherBiomeProvider.register();
+
 		CityRegistry.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
 
 		IEventBus forgeBus = MinecraftForge.EVENT_BUS;
@@ -131,9 +132,12 @@ public class BetterNether
 		event.enqueueWork(() -> {
 			CityRegistry.setupStructures();
 			ConfiguredStructureRegistry.registerConfiguredStructures();
+			NetherBiomeProvider.register();
 
 		});
     }
+
+
     
 	private void initOptions() {
 		thinArmor = Configs.MAIN.getBoolean("improvement", "smaller_armor_offset", true);

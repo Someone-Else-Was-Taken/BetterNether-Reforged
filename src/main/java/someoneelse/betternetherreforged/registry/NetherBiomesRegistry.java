@@ -126,7 +126,6 @@ public class NetherBiomesRegistry {
 	}
 
 	public static void mapBiomes(Registry<Biome> biomeRegistry) {
-		GENERATOR.clear();
 		GENERATOR.addAll(REGISTRY.getValues());
 
 		MUTABLE.clear();
