@@ -69,13 +69,13 @@ public class CityFeature extends Structure<NoFeatureConfig> {
 			MutableBoundingBox cityBox = MutableBoundingBox.getNewBoundingBox();
 			for (CityPiece p: buildings)
 				cityBox.expandTo(p.getBoundingBox());
-
 			int d1 = Math.max((center.getX() - cityBox.minX), (cityBox.maxX - center.getX()));
 			int d2 = Math.max((center.getZ() - cityBox.minZ), (cityBox.maxZ - center.getZ()));
 			int radius = Math.max(d1, d2);
 			if (radius / 2 + center.getY() < cityBox.maxY) {
 				radius = (cityBox.maxY - center.getY()) / 2;
 			}
+
 
 			if (!(chunkGenerator instanceof FlatChunkGenerator))
 			{
