@@ -33,23 +33,28 @@ public class BiomeChunk {
 					biomes[y][x][z] = PreBio[offsetY(y, random)][offsetXZ(x, random)][offsetXZ(z, random)].getSubBiome(random);
 	}
 
-	public NetherBiome getBiome(int x, int y, int z) {
+	public NetherBiome getBiome(int x, int y, int z)
+	{
 		return biomes[clamp(y)][x & MASK_C][z & MASK_C];
 	}
 
-	private int offsetXZ(int x, Random random) {
+	private int offsetXZ(int x, Random random)
+	{
 		return ((x + random.nextInt(2)) >> 1) & MASK_A;
 	}
 
-	private int offsetY(int y, Random random) {
+	private int offsetY(int y, Random random)
+	{
 		return ((y + random.nextInt(2)) >> 1) & maskB;
 	}
 
-	private int clamp(int y) {
+	private int clamp(int y)
+	{
 		return y < 0 ? 0 : y > maxY ? maxY : y;
 	}
 
-	private int clampOne(int x) {
+	private int clampOne(int x)
+	{
 		return x < 1 ? 1 : x;
 	}
 }

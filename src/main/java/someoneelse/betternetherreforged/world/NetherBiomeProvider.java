@@ -55,7 +55,8 @@ public class NetherBiomeProvider extends BiomeProvider {
 	@Override
 	public Biome getNoiseBiome(int biomeX, int biomeY, int biomeZ) {
 		NetherBiome netherBiome = map.getBiome(biomeX << 2, biomeY << 2, biomeZ << 2);
-		if (biomeX == 0 && biomeZ == 0) {
+		if (biomeX == 0 && biomeZ == 0)
+		{
 			map.clearCache();
 		}
 		return netherBiome.getActualBiome();

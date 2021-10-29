@@ -11,6 +11,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import someoneelse.betternetherreforged.BetterNether;
+import someoneelse.betternetherreforged.config.Configs;
+import someoneelse.betternetherreforged.world.BNWorldGenerator;
 import someoneelse.betternetherreforged.world.structures.CityFeature;
 
 import java.util.HashMap;
@@ -51,11 +53,12 @@ public class CityRegistry {
      * See the comments in below for more details.
      */
 
+
     public static void setupStructures() {
         setupMapSpacingAndLand(
                 CITY.get(),
-                new StructureSeparationSettings(64,
-                        64 >> 1,
+                new StructureSeparationSettings(BNWorldGenerator.distance,
+                        BNWorldGenerator.separation,
                         1234567890),
                 true);
 

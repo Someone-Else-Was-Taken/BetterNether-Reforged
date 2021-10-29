@@ -97,8 +97,6 @@ public class BNWorldGenerator {
 		biomeSizeY = Configs.GENERATOR.getInt("generator_world", "biome_size_y", 40);
 		volumetric = Configs.GENERATOR.getBoolean("generator_world", "volumetric_biomes", true);
 
-		int distance = Configs.GENERATOR.getInt("generator.world.cities", "distance", 64);
-		int separation = distance >> 1;
 
 		Configs.GENERATOR.getBoolean("generator.world.cities", "generate", true);
 
@@ -106,6 +104,8 @@ public class BNWorldGenerator {
 
 	}
 
+	public static int distance = Configs.GENERATOR.getInt("generator.world.cities", "distance", 64);
+	public static int separation = distance >> 1;
 
 
 	public static void init(long seed) {
