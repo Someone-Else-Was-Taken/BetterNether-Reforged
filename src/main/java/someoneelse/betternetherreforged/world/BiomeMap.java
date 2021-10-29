@@ -23,7 +23,6 @@ public class BiomeMap {
 	private final boolean volumetric;
 
 	public BiomeMap(long seed, int sizeXZ, int sizeY, boolean volumetric) {
-		MAPS.clear();
 		RANDOM.setSeed(seed);
 		noiseX = new OpenSimplexNoise(RANDOM.nextLong());
 		noiseY = new OpenSimplexNoise(RANDOM.nextLong());

@@ -19,6 +19,8 @@ import someoneelse.betternetherreforged.structures.plants.StructureReeds;
 import someoneelse.betternetherreforged.structures.plants.StructureSepiaBoneGrass;
 
 public class NetherSulfuricBoneReef extends NetherBiome {
+
+
 	public NetherSulfuricBoneReef(String name) {
 		super(new BiomeDefinition(name)
 				.setFogColor(154, 144, 49)
@@ -29,14 +31,11 @@ public class NetherSulfuricBoneReef extends NetherBiome {
 				.setParticleConfig(new ParticleEffectAmbience(ParticleTypes.ASH, 0.01F)));
 
 		addStructure("bone_stalactite", new StructureStalagmite(BlocksRegistry.BONE_STALACTITE, BlocksRegistry.BONE_BLOCK), StructureType.FLOOR, 0.05F, true);
-
 		addStructure("nether_reed", new StructureReeds(), StructureType.FLOOR, 0.5F, false);
 		addStructure("bone_reef", new StructureBoneReef(), StructureType.FLOOR, 0.2F, true);
 		addStructure("jellyfish_mushroom", new StructureJellyfishMushroom(), StructureType.FLOOR, 0.02F, true);
 		addStructure("sulfuric_bone_grass", new StructureSepiaBoneGrass(), StructureType.FLOOR, 0.1F, false);
-
 		addStructure("bone_stalagmite", new StructureStalactite(BlocksRegistry.BONE_STALACTITE, BlocksRegistry.BONE_BLOCK), StructureType.CEIL, 0.05F, true);
-
 		addStructure("golden_lumabus_vine", new StructureGoldenLumabusVine(), StructureType.CEIL, 0.3F, true);
 	}
 

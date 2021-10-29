@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import com.google.common.collect.Maps;
 
+import net.minecraft.util.RegistryKey;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.StructureFeature;
@@ -27,6 +28,7 @@ public class NetherBiomesRegistry {
 
 	public static IForgeRegistry<NetherBiome> REGISTRY;
 	public static final ArrayList<NetherBiome> ALL_BIOMES = new ArrayList<>();
+	private static final HashMap<NetherBiome, RegistryKey<Biome>> KEYS = Maps.newHashMap();
 	public static final Map<Biome, NetherBiome> MUTABLE = Maps.newHashMap();
 	private static final ArrayList<NetherBiome> GENERATOR = new ArrayList<NetherBiome>();
 	
@@ -70,7 +72,7 @@ public class NetherBiomesRegistry {
 
 		registerNetherBiome(BIOME_GRAVEL_DESERT);
 		registerNetherBiome(BIOME_NETHER_JUNGLE);
-		
+
 		registerNetherBiome(BIOME_EMPTY_NETHER);
 		registerNetherBiome(BIOME_CRIMSON_FOREST);
 		registerNetherBiome(BIOME_WARPED_FOREST);
@@ -122,18 +124,18 @@ public class NetherBiomesRegistry {
 		r.setType(NetherBiome.class);
 		REGISTRY = r.create();
 	}
-	
+
 	public static void mapBiomes(Registry<Biome> biomeRegistry) {
 		GENERATOR.clear();
 		GENERATOR.addAll(REGISTRY.getValues());
-		
+
 		MUTABLE.clear();
 		for (NetherBiome netherBiome : NetherBiomesRegistry.getAllBiomes()) {
 			Biome biome = biomeRegistry.getOrDefault(netherBiome.getID());
 			netherBiome.setActualBiome(biome);
 			MUTABLE.put(biome, netherBiome);
 		}
-		
+
 		if (maxDefChance == 0) maxDefChance = maxChance;
 		maxChance = maxDefChance;
 
@@ -157,8 +159,9 @@ public class NetherBiomesRegistry {
 				}
 			}
 		}
-		
+
 		Config.save();
+
 	}
 	
 	private static void register(NetherBiome biome) {
@@ -193,7 +196,7 @@ public class NetherBiomesRegistry {
 			ALL_BIOMES.add(biome);
 		}
 	}
-	
+
 	public static void registerSubBiome(NetherBiome biome, NetherBiome mainBiome, float chance) {
 		String regName = biome.getRawBiomeRegistryName();
 		chance = Configs.GENERATOR.getFloat("biomes.betternether.variation", regName + "_chance", chance);
@@ -224,6 +227,11 @@ public class NetherBiomesRegistry {
 
 	public static ArrayList<NetherBiome> getAllBiomes() {
 		return ALL_BIOMES;
+	}
+
+	public static RegistryKey<Biome> getBiomeKey(NetherBiome biome)
+	{
+		return KEYS.get(biome);
 	}
 
 

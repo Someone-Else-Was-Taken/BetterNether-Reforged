@@ -23,7 +23,7 @@ import someoneelse.betternetherreforged.BetterNether;
 public final class Config {
 	private static final List<Config> ALL = Lists.newArrayList();
 	private JsonObject config;
-	private boolean rewrite = false;
+	private static boolean rewrite = false;
 	private final String name;
 	
 	public Config(String name) {
@@ -255,7 +255,7 @@ public final class Config {
 		return result;
 	}
 
-	public void markToSave() {
+	public static void markToSave() {
 		rewrite = true;
 	}
 }

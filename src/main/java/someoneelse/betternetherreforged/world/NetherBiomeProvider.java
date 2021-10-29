@@ -22,10 +22,10 @@ import someoneelse.betternetherreforged.registry.NetherBiomesRegistry;
 
 public class NetherBiomeProvider extends BiomeProvider {
 	public static final Codec<NetherBiomeProvider> CODEC = RecordCodecBuilder.create((instance) -> {
-		return instance.group(RegistryLookupCodec.getLookUpCodec(Registry.BIOME_KEY).forGetter((theEndBiomeSource) -> {
-			return theEndBiomeSource.biomeRegistry;
-		}), Codec.LONG.fieldOf("seed").stable().forGetter((theEndBiomeSource) -> {
-			return theEndBiomeSource.seed;
+		return instance.group(RegistryLookupCodec.getLookUpCodec(Registry.BIOME_KEY).forGetter((netherBiomeProvider) -> {
+			return netherBiomeProvider.biomeRegistry;
+		}), Codec.LONG.fieldOf("seed").stable().forGetter((netherBiomeProvider) -> {
+			return netherBiomeProvider.seed;
 		})).apply(instance, instance.stable(NetherBiomeProvider::new));
 	});
 	private BiomeMap map;
@@ -41,7 +41,7 @@ public class NetherBiomeProvider extends BiomeProvider {
 
 
 	}
-	
+
 	private static List<Biome> getBiomes(Registry<Biome> biomeRegistry) {
 		List<Biome> result = Lists.newArrayList();
 		biomeRegistry.forEach((biome) -> {
