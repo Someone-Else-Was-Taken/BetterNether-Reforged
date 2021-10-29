@@ -9,7 +9,7 @@ logoFile="examplemod.png" #optional
 credits="Paulevs for the original, Redd90 for the port" #optional
 authors="Paulevs (Fabric Original), SomeoneElse (Forge port)" #optional
 description='''
-Bottom Text (Get It?)'''
+'''
 [[dependencies.betternether]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
