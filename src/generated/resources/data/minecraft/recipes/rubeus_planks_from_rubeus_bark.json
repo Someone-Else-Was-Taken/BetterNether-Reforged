@@ -3,11 +3,11 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:rubeus_bark"
+      "item": "betternetherreforged:rubeus_bark"
     }
   ],
   "result": {
-    "item": "betternether:rubeus_planks",
+    "item": "betternetherreforged:rubeus_planks",
     "count": 4
   }
 }

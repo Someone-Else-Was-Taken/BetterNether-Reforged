@@ -3,11 +3,11 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:willow_bark"
+      "item": "betternetherreforged:willow_bark"
     }
   ],
   "result": {
-    "item": "betternether:willow_planks",
+    "item": "betternetherreforged:willow_planks",
     "count": 4
   }
 }

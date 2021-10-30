@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:rubeus_slab"
+      "item": "betternetherreforged:rubeus_slab"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:taburet_rubeus"
+    "item": "betternetherreforged:taburet_rubeus"
   }
 }

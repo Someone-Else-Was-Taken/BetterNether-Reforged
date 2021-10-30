@@ -3,11 +3,11 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:striped_bark_stalagnate"
+      "item": "betternetherreforged:striped_bark_stalagnate"
     }
   ],
   "result": {
-    "item": "betternether:stalagnate_planks",
+    "item": "betternetherreforged:stalagnate_planks",
     "count": 4
   }
 }

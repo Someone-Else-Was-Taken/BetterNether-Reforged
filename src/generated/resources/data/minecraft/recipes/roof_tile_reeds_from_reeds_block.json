@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:reeds_block"
+      "item": "betternetherreforged:reeds_block"
     }
   },
   "result": {
-    "item": "betternether:roof_tile_reeds",
+    "item": "betternetherreforged:roof_tile_reeds",
     "count": 6
   }
 }

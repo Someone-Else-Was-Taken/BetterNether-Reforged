@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:anchor_tree_slab"
+      "item": "betternetherreforged:anchor_tree_slab"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:taburet_anchor_tree"
+    "item": "betternetherreforged:taburet_anchor_tree"
   }
 }

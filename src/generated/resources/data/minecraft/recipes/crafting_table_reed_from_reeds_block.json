@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:reeds_block"
+      "item": "betternetherreforged:reeds_block"
     }
   },
   "result": {
-    "item": "betternether:crafting_table_reed"
+    "item": "betternetherreforged:crafting_table_reed"
   }
 }

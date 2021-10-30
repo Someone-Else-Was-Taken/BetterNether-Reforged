@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:mushroom_fir_planks"
+      "item": "betternetherreforged:mushroom_fir_planks"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:mushroom_fir_fence",
+    "item": "betternetherreforged:mushroom_fir_fence",
     "count": 3
   }
 }

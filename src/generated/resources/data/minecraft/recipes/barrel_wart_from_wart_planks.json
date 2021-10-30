@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:wart_planks"
+      "item": "betternetherreforged:wart_planks"
     },
     "S": {
-      "item": "betternether:wart_slab"
+      "item": "betternetherreforged:wart_slab"
     }
   },
   "result": {
-    "item": "betternether:barrel_wart"
+    "item": "betternetherreforged:barrel_wart"
   }
 }

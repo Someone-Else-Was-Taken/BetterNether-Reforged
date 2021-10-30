@@ -3,10 +3,10 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:mushroom_planks"
+      "item": "betternetherreforged:mushroom_planks"
     }
   ],
   "result": {
-    "item": "betternether:mushroom_button"
+    "item": "betternetherreforged:mushroom_button"
   }
 }

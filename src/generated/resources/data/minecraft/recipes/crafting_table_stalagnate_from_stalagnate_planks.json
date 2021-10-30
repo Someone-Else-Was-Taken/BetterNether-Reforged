@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:stalagnate_planks"
+      "item": "betternetherreforged:stalagnate_planks"
     }
   },
   "result": {
-    "item": "betternether:crafting_table_stalagnate"
+    "item": "betternetherreforged:crafting_table_stalagnate"
   }
 }

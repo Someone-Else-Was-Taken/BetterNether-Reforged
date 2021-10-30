@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:basalt_bricks"
+      "item": "betternetherreforged:basalt_bricks"
     }
   },
   "result": {
-    "item": "betternether:basalt_bricks_wall",
+    "item": "betternetherreforged:basalt_bricks_wall",
     "count": 6
   }
 }

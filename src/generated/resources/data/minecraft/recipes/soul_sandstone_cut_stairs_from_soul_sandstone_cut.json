@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:soul_sandstone_cut"
+      "item": "betternetherreforged:soul_sandstone_cut"
     }
   },
   "result": {
-    "item": "betternether:soul_sandstone_cut_stairs",
+    "item": "betternetherreforged:soul_sandstone_cut_stairs",
     "count": 4
   }
 }

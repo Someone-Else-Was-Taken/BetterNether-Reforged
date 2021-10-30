@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:cincinnasite_forged"
+      "item": "betternetherreforged:cincinnasite_forged"
     }
   },
   "result": {
-    "item": "betternether:cincinnasite_wall",
+    "item": "betternetherreforged:cincinnasite_wall",
     "count": 6
   }
 }

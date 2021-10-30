@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:stalagnate_planks"
+      "item": "betternetherreforged:stalagnate_planks"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:sign_stalagnate"
+    "item": "betternetherreforged:sign_stalagnate"
   }
 }

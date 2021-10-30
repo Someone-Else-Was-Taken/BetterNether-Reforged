@@ -3,10 +3,10 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:reeds_block"
+      "item": "betternetherreforged:reeds_block"
     }
   ],
   "result": {
-    "item": "betternether:reeds_button"
+    "item": "betternetherreforged:reeds_button"
   }
 }

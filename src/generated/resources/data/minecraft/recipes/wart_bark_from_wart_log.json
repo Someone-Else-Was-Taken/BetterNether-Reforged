@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:wart_log"
+      "item": "betternetherreforged:wart_log"
     }
   },
   "result": {
-    "item": "betternether:wart_bark",
+    "item": "betternetherreforged:wart_bark",
     "count": 3
   }
 }

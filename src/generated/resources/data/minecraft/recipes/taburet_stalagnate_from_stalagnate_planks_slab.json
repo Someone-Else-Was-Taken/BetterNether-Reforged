@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:stalagnate_planks_slab"
+      "item": "betternetherreforged:stalagnate_planks_slab"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:taburet_stalagnate"
+    "item": "betternetherreforged:taburet_stalagnate"
   }
 }

@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:rubeus_planks"
+      "item": "betternetherreforged:rubeus_planks"
     }
   },
   "result": {
-    "item": "betternether:rubeus_trapdoor",
+    "item": "betternetherreforged:rubeus_trapdoor",
     "count": 2
   }
 }

@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:willow_planks"
+      "item": "betternetherreforged:willow_planks"
     }
   },
   "result": {
-    "item": "betternether:crafting_table_willow"
+    "item": "betternetherreforged:crafting_table_willow"
   }
 }

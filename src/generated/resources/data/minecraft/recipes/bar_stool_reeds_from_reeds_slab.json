@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:reeds_slab"
+      "item": "betternetherreforged:reeds_slab"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:bar_stool_reeds"
+    "item": "betternetherreforged:bar_stool_reeds"
   }
 }

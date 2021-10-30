@@ -3,11 +3,11 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:anchor_tree_log"
+      "item": "betternetherreforged:anchor_tree_log"
     }
   ],
   "result": {
-    "item": "betternether:anchor_tree_planks",
+    "item": "betternetherreforged:anchor_tree_planks",
     "count": 4
   }
 }

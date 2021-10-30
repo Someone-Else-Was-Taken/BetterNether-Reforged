@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:rubeus_slab"
+      "item": "betternetherreforged:rubeus_slab"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:bar_stool_rubeus"
+    "item": "betternetherreforged:bar_stool_rubeus"
   }
 }

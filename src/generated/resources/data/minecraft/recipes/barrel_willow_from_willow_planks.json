@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:willow_planks"
+      "item": "betternetherreforged:willow_planks"
     },
     "S": {
-      "item": "betternether:willow_slab"
+      "item": "betternetherreforged:willow_slab"
     }
   },
   "result": {
-    "item": "betternether:barrel_willow"
+    "item": "betternetherreforged:barrel_willow"
   }
 }

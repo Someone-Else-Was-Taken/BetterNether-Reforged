@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:mushroom_planks"
+      "item": "betternetherreforged:mushroom_planks"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:sign_mushroom"
+    "item": "betternetherreforged:sign_mushroom"
   }
 }

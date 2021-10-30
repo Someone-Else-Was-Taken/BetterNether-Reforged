@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:reeds_block"
+      "item": "betternetherreforged:reeds_block"
     }
   },
   "result": {
-    "item": "betternether:reeds_trapdoor",
+    "item": "betternetherreforged:reeds_trapdoor",
     "count": 2
   }
 }

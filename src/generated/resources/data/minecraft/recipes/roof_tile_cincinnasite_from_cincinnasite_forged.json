@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:cincinnasite_forged"
+      "item": "betternetherreforged:cincinnasite_forged"
     }
   },
   "result": {
-    "item": "betternether:roof_tile_cincinnasite",
+    "item": "betternetherreforged:roof_tile_cincinnasite",
     "count": 6
   }
 }

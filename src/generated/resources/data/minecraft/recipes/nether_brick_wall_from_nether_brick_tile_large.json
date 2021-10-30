@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:nether_brick_tile_large"
+      "item": "betternetherreforged:nether_brick_tile_large"
     }
   },
   "result": {
-    "item": "betternether:nether_brick_wall",
+    "item": "betternetherreforged:nether_brick_wall",
     "count": 6
   }
 }

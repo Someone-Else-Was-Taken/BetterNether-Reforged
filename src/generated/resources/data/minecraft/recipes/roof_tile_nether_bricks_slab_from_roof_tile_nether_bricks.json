@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:roof_tile_nether_bricks"
+      "item": "betternetherreforged:roof_tile_nether_bricks"
     }
   },
   "result": {
-    "item": "betternether:roof_tile_nether_bricks_slab",
+    "item": "betternetherreforged:roof_tile_nether_bricks_slab",
     "count": 6
   }
 }

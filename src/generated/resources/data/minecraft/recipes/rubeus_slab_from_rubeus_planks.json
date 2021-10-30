@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:rubeus_planks"
+      "item": "betternetherreforged:rubeus_planks"
     }
   },
   "result": {
-    "item": "betternether:rubeus_slab",
+    "item": "betternetherreforged:rubeus_slab",
     "count": 6
   }
 }

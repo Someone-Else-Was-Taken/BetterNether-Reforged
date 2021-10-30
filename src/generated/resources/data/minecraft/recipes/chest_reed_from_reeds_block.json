@@ -8,10 +8,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:reeds_block"
+      "item": "betternetherreforged:reeds_block"
     }
   },
   "result": {
-    "item": "betternether:chest_reed"
+    "item": "betternetherreforged:chest_reed"
   }
 }

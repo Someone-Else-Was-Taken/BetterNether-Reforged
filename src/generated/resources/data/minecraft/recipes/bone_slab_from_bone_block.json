@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:bone_block"
+      "item": "betternetherreforged:bone_block"
     }
   },
   "result": {
-    "item": "betternether:bone_slab",
+    "item": "betternetherreforged:bone_slab",
     "count": 6
   }
 }

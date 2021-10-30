@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:stalagnate_log"
+      "item": "betternetherreforged:stalagnate_log"
     }
   },
   "result": {
-    "item": "betternether:stalagnate_bark",
+    "item": "betternetherreforged:stalagnate_bark",
     "count": 3
   }
 }

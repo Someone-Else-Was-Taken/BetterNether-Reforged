@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:anchor_tree_planks"
+      "item": "betternetherreforged:anchor_tree_planks"
     }
   },
   "result": {
-    "item": "betternether:anchor_tree_plate"
+    "item": "betternetherreforged:anchor_tree_plate"
   }
 }

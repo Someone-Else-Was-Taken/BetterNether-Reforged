@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:rubeus_planks"
+      "item": "betternetherreforged:rubeus_planks"
     }
   },
   "result": {
-    "item": "betternether:crafting_table_rubeus"
+    "item": "betternetherreforged:crafting_table_rubeus"
   }
 }

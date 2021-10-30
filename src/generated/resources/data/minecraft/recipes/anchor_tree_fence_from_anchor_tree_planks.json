@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:anchor_tree_planks"
+      "item": "betternetherreforged:anchor_tree_planks"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:anchor_tree_fence",
+    "item": "betternetherreforged:anchor_tree_fence",
     "count": 3
   }
 }

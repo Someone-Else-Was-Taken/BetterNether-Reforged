@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:cincinnasite_forged"
+      "item": "betternetherreforged:cincinnasite_forged"
     }
   },
   "result": {
-    "item": "betternether:cincinnasite_plate"
+    "item": "betternetherreforged:cincinnasite_plate"
   }
 }

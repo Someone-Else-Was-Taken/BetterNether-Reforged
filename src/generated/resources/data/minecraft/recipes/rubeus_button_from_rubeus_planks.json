@@ -3,10 +3,10 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:rubeus_planks"
+      "item": "betternetherreforged:rubeus_planks"
     }
   ],
   "result": {
-    "item": "betternether:rubeus_button"
+    "item": "betternetherreforged:rubeus_button"
   }
 }

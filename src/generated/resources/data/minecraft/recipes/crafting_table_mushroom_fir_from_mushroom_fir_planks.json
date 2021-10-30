@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:mushroom_fir_planks"
+      "item": "betternetherreforged:mushroom_fir_planks"
     }
   },
   "result": {
-    "item": "betternether:crafting_table_mushroom_fir"
+    "item": "betternetherreforged:crafting_table_mushroom_fir"
   }
 }

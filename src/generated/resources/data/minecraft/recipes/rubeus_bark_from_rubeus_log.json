@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:rubeus_log"
+      "item": "betternetherreforged:rubeus_log"
     }
   },
   "result": {
-    "item": "betternether:rubeus_bark",
+    "item": "betternetherreforged:rubeus_bark",
     "count": 3
   }
 }

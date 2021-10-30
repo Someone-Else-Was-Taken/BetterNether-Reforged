@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:wart_planks"
+      "item": "betternetherreforged:wart_planks"
     }
   },
   "result": {
-    "item": "betternether:wart_trapdoor",
+    "item": "betternetherreforged:wart_trapdoor",
     "count": 2
   }
 }

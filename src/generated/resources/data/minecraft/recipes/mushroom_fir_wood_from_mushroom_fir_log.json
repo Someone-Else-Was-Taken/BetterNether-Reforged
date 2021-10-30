@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:mushroom_fir_log"
+      "item": "betternetherreforged:mushroom_fir_log"
     }
   },
   "result": {
-    "item": "betternether:mushroom_fir_wood",
+    "item": "betternetherreforged:mushroom_fir_wood",
     "count": 3
   }
 }

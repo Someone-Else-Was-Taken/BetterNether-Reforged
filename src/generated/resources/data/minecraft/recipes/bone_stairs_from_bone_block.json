@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:bone_block"
+      "item": "betternetherreforged:bone_block"
     }
   },
   "result": {
-    "item": "betternether:bone_stairs",
+    "item": "betternetherreforged:bone_stairs",
     "count": 4
   }
 }

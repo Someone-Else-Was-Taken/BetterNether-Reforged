@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:cincinnasite_forged"
+      "item": "betternetherreforged:cincinnasite_forged"
     },
     "I": [],
     "L": {
@@ -16,6 +16,6 @@
     }
   },
   "result": {
-    "item": "betternether:cincinnasite_fire_bowl"
+    "item": "betternetherreforged:cincinnasite_fire_bowl"
   }
 }

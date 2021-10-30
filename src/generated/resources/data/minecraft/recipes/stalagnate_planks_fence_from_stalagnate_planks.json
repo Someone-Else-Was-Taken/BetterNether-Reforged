@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:stalagnate_planks"
+      "item": "betternetherreforged:stalagnate_planks"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:stalagnate_planks_fence",
+    "item": "betternetherreforged:stalagnate_planks_fence",
     "count": 3
   }
 }

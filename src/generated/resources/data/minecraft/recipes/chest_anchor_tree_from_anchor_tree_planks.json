@@ -8,10 +8,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:anchor_tree_planks"
+      "item": "betternetherreforged:anchor_tree_planks"
     }
   },
   "result": {
-    "item": "betternether:chest_anchor_tree"
+    "item": "betternetherreforged:chest_anchor_tree"
   }
 }

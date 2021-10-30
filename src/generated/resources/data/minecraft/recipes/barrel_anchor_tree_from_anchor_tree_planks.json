@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:anchor_tree_planks"
+      "item": "betternetherreforged:anchor_tree_planks"
     },
     "S": {
-      "item": "betternether:anchor_tree_slab"
+      "item": "betternetherreforged:anchor_tree_slab"
     }
   },
   "result": {
-    "item": "betternether:barrel_anchor_tree"
+    "item": "betternetherreforged:barrel_anchor_tree"
   }
 }

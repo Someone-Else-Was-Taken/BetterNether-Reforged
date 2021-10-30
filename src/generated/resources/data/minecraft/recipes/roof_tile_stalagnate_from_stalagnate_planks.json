@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:stalagnate_planks"
+      "item": "betternetherreforged:stalagnate_planks"
     }
   },
   "result": {
-    "item": "betternether:roof_tile_stalagnate",
+    "item": "betternetherreforged:roof_tile_stalagnate",
     "count": 6
   }
 }

@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:cincinnasite_slab"
+      "item": "betternetherreforged:cincinnasite_slab"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:chair_cincinnasite"
+    "item": "betternetherreforged:chair_cincinnasite"
   }
 }

@@ -3,10 +3,10 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:stalagnate_stem"
+      "item": "betternetherreforged:stalagnate_stem"
     }
   ],
   "result": {
-    "item": "betternether:stalagnate_planks"
+    "item": "betternetherreforged:stalagnate_planks"
   }
 }

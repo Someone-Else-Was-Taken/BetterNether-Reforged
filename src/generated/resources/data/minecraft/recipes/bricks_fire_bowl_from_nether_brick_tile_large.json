@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:nether_brick_tile_large"
+      "item": "betternetherreforged:nether_brick_tile_large"
     },
     "I": {
       "item": "minecraft:nether_brick"
@@ -18,6 +18,6 @@
     }
   },
   "result": {
-    "item": "betternether:bricks_fire_bowl"
+    "item": "betternetherreforged:bricks_fire_bowl"
   }
 }

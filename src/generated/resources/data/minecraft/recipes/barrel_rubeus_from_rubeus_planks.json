@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:rubeus_planks"
+      "item": "betternetherreforged:rubeus_planks"
     },
     "S": {
-      "item": "betternether:rubeus_slab"
+      "item": "betternetherreforged:rubeus_slab"
     }
   },
   "result": {
-    "item": "betternether:barrel_rubeus"
+    "item": "betternetherreforged:barrel_rubeus"
   }
 }

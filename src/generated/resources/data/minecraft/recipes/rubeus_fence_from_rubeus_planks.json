@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:rubeus_planks"
+      "item": "betternetherreforged:rubeus_planks"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:rubeus_fence",
+    "item": "betternetherreforged:rubeus_fence",
     "count": 3
   }
 }

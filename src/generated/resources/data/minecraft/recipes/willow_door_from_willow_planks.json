@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:willow_planks"
+      "item": "betternetherreforged:willow_planks"
     }
   },
   "result": {
-    "item": "betternether:willow_door",
+    "item": "betternetherreforged:willow_door",
     "count": 3
   }
 }

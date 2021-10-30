@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:roof_tile_stalagnate"
+      "item": "betternetherreforged:roof_tile_stalagnate"
     }
   },
   "result": {
-    "item": "betternether:roof_tile_stalagnate_slab",
+    "item": "betternetherreforged:roof_tile_stalagnate_slab",
     "count": 6
   }
 }

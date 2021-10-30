@@ -3,10 +3,10 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:wart_planks"
+      "item": "betternetherreforged:wart_planks"
     }
   ],
   "result": {
-    "item": "betternether:wart_button"
+    "item": "betternetherreforged:wart_button"
   }
 }

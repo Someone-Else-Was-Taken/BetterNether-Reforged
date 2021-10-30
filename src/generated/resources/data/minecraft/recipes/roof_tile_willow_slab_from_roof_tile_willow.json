@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:roof_tile_willow"
+      "item": "betternetherreforged:roof_tile_willow"
     }
   },
   "result": {
-    "item": "betternether:roof_tile_willow_slab",
+    "item": "betternetherreforged:roof_tile_willow_slab",
     "count": 6
   }
 }

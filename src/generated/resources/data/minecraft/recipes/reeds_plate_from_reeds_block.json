@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:reeds_block"
+      "item": "betternetherreforged:reeds_block"
     }
   },
   "result": {
-    "item": "betternether:reeds_plate"
+    "item": "betternetherreforged:reeds_plate"
   }
 }

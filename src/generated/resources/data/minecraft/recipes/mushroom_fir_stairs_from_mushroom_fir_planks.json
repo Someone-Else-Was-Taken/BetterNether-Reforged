@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:mushroom_fir_planks"
+      "item": "betternetherreforged:mushroom_fir_planks"
     }
   },
   "result": {
-    "item": "betternether:mushroom_fir_stairs",
+    "item": "betternetherreforged:mushroom_fir_stairs",
     "count": 4
   }
 }

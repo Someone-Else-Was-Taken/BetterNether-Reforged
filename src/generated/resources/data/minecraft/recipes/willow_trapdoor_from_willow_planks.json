@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:willow_planks"
+      "item": "betternetherreforged:willow_planks"
     }
   },
   "result": {
-    "item": "betternether:willow_trapdoor",
+    "item": "betternetherreforged:willow_trapdoor",
     "count": 2
   }
 }

@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:willow_log"
+      "item": "betternetherreforged:willow_log"
     }
   },
   "result": {
-    "item": "betternether:willow_bark",
+    "item": "betternetherreforged:willow_bark",
     "count": 3
   }
 }

@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:blue_obsidian_tile_small"
+      "item": "betternetherreforged:blue_obsidian_tile_small"
     }
   },
   "result": {
-    "item": "betternether:blue_obsidian_tile_slab",
+    "item": "betternetherreforged:blue_obsidian_tile_slab",
     "count": 6
   }
 }

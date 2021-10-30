@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:reeds_block"
+      "item": "betternetherreforged:reeds_block"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:reeds_gate"
+    "item": "betternetherreforged:reeds_gate"
   }
 }

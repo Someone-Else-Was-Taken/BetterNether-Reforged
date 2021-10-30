@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:wart_planks"
+      "item": "betternetherreforged:wart_planks"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:sign_wart"
+    "item": "betternetherreforged:sign_wart"
   }
 }

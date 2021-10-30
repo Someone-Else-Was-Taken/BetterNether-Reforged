@@ -8,10 +8,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:mushroom_planks"
+      "item": "betternetherreforged:mushroom_planks"
     }
   },
   "result": {
-    "item": "betternether:chest_mushroom"
+    "item": "betternetherreforged:chest_mushroom"
   }
 }

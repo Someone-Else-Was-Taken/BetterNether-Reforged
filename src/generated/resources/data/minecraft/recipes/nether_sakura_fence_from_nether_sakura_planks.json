@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:nether_sakura_planks"
+      "item": "betternetherreforged:nether_sakura_planks"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:nether_sakura_fence",
+    "item": "betternetherreforged:nether_sakura_fence",
     "count": 3
   }
 }

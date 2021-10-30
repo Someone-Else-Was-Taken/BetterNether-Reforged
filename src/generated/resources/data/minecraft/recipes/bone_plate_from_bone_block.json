@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:bone_block"
+      "item": "betternetherreforged:bone_block"
     }
   },
   "result": {
-    "item": "betternether:bone_plate"
+    "item": "betternetherreforged:bone_plate"
   }
 }

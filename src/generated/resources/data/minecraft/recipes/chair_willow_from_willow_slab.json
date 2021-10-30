@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:willow_slab"
+      "item": "betternetherreforged:willow_slab"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:chair_willow"
+    "item": "betternetherreforged:chair_willow"
   }
 }

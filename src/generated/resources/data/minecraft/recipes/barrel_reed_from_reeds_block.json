@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:reeds_block"
+      "item": "betternetherreforged:reeds_block"
     },
     "S": {
-      "item": "betternether:reeds_slab"
+      "item": "betternetherreforged:reeds_slab"
     }
   },
   "result": {
-    "item": "betternether:barrel_reed"
+    "item": "betternetherreforged:barrel_reed"
   }
 }

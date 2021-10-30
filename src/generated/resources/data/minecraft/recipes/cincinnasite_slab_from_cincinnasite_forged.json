@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:cincinnasite_forged"
+      "item": "betternetherreforged:cincinnasite_forged"
     }
   },
   "result": {
-    "item": "betternether:cincinnasite_slab",
+    "item": "betternetherreforged:cincinnasite_slab",
     "count": 6
   }
 }

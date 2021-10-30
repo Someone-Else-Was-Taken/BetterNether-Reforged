@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:stalagnate_planks"
+      "item": "betternetherreforged:stalagnate_planks"
     }
   },
   "result": {
-    "item": "betternether:stalagnate_planks_slab",
+    "item": "betternetherreforged:stalagnate_planks_slab",
     "count": 6
   }
 }

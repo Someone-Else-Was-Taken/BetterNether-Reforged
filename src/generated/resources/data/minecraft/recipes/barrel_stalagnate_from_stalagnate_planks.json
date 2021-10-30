@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:stalagnate_planks"
+      "item": "betternetherreforged:stalagnate_planks"
     },
     "S": {
-      "item": "betternether:stalagnate_planks_slab"
+      "item": "betternetherreforged:stalagnate_planks_slab"
     }
   },
   "result": {
-    "item": "betternether:barrel_stalagnate"
+    "item": "betternetherreforged:barrel_stalagnate"
   }
 }

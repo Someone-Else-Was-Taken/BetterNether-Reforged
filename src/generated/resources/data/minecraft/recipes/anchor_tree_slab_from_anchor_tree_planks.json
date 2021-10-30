@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:anchor_tree_planks"
+      "item": "betternetherreforged:anchor_tree_planks"
     }
   },
   "result": {
-    "item": "betternether:anchor_tree_slab",
+    "item": "betternetherreforged:anchor_tree_slab",
     "count": 6
   }
 }

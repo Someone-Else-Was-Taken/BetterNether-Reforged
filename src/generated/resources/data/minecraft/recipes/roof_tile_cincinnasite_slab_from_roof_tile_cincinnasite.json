@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:roof_tile_cincinnasite"
+      "item": "betternetherreforged:roof_tile_cincinnasite"
     }
   },
   "result": {
-    "item": "betternether:roof_tile_cincinnasite_slab",
+    "item": "betternetherreforged:roof_tile_cincinnasite_slab",
     "count": 6
   }
 }

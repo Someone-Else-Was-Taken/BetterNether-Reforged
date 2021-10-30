@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:cincinnasite_forged"
+      "item": "betternetherreforged:cincinnasite_forged"
     }
   },
   "result": {
-    "item": "betternether:cincinnasite_stairs",
+    "item": "betternetherreforged:cincinnasite_stairs",
     "count": 4
   }
 }

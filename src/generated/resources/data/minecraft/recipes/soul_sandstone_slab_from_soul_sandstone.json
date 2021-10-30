@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:soul_sandstone"
+      "item": "betternetherreforged:soul_sandstone"
     }
   },
   "result": {
-    "item": "betternether:soul_sandstone_slab",
+    "item": "betternetherreforged:soul_sandstone_slab",
     "count": 6
   }
 }

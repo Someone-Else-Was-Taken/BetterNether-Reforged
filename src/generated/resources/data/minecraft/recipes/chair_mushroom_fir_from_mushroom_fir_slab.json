@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:mushroom_fir_slab"
+      "item": "betternetherreforged:mushroom_fir_slab"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "betternether:chair_mushroom_fir"
+    "item": "betternetherreforged:chair_mushroom_fir"
   }
 }

@@ -3,11 +3,11 @@
   "group": "betternether",
   "ingredients": [
     {
-      "item": "betternether:nether_sakura_log"
+      "item": "betternetherreforged:nether_sakura_log"
     }
   ],
   "result": {
-    "item": "betternether:nether_sakura_planks",
+    "item": "betternetherreforged:nether_sakura_planks",
     "count": 4
   }
 }

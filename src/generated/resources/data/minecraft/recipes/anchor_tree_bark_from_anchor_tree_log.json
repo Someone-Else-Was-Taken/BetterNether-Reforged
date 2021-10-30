@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:anchor_tree_log"
+      "item": "betternetherreforged:anchor_tree_log"
     }
   },
   "result": {
-    "item": "betternether:anchor_tree_bark",
+    "item": "betternetherreforged:anchor_tree_bark",
     "count": 3
   }
 }

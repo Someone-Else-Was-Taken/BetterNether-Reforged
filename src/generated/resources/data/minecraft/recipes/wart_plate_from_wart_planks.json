@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:wart_planks"
+      "item": "betternetherreforged:wart_planks"
     }
   },
   "result": {
-    "item": "betternether:wart_plate"
+    "item": "betternetherreforged:wart_plate"
   }
 }

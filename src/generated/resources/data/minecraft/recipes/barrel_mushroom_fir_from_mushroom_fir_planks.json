@@ -8,13 +8,13 @@
   ],
   "key": {
     "#": {
-      "item": "betternether:mushroom_fir_planks"
+      "item": "betternetherreforged:mushroom_fir_planks"
     },
     "S": {
-      "item": "betternether:mushroom_fir_slab"
+      "item": "betternetherreforged:mushroom_fir_slab"
     }
   },
   "result": {
-    "item": "betternether:barrel_mushroom_fir"
+    "item": "betternetherreforged:barrel_mushroom_fir"
   }
 }
