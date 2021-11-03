@@ -209,6 +209,7 @@ public class BetterNether
 		if(event.getWorld() instanceof ServerWorld){
 			ServerWorld serverWorld = (ServerWorld)event.getWorld();
 
+
 			try {
 				if(GETCODEC_METHOD == null) GETCODEC_METHOD = ObfuscationReflectionHelper.findMethod(ChunkGenerator.class, "func_230347_a_");
 				ResourceLocation cgRL = Registry.CHUNK_GENERATOR_CODEC.getKey((Codec<? extends ChunkGenerator>) GETCODEC_METHOD.invoke(serverWorld.getChunkProvider().generator));

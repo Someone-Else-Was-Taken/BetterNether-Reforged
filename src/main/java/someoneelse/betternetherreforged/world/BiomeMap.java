@@ -23,6 +23,7 @@ public class BiomeMap {
 	private final boolean volumetric;
 
 	public BiomeMap(long seed, int sizeXZ, int sizeY, boolean volumetric) {
+		MAPS.clear();
 		RANDOM.setSeed(seed);
 		noiseX = new OpenSimplexNoise(RANDOM.nextLong());
 		noiseY = new OpenSimplexNoise(RANDOM.nextLong());
@@ -36,9 +37,12 @@ public class BiomeMap {
 		size = 1 << depth;
 	}
 
+
 	public void clearCache() {
 		if (MAPS.size() > 16)
 			MAPS.clear();
+
+
 	}
 
 	private NetherBiome getRawBiome(int bx, int by, int bz) {

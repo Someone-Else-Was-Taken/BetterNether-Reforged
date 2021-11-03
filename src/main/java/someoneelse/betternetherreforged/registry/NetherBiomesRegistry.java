@@ -31,7 +31,7 @@ public class NetherBiomesRegistry {
 	private static final HashMap<NetherBiome, RegistryKey<Biome>> KEYS = Maps.newHashMap();
 	public static final Map<Biome, NetherBiome> MUTABLE = Maps.newHashMap();
 	private static final ArrayList<NetherBiome> GENERATOR = new ArrayList<NetherBiome>();
-	
+
 	public static final NetherBiome BIOME_EMPTY_NETHER = new NetherBiomeWrapper(new ResourceLocation("nether_wastes"));
 	public static final NetherBiome BIOME_CRIMSON_FOREST = new NetherBiomeWrapper(new ResourceLocation("crimson_forest"));
 	public static final NetherBiome BIOME_WARPED_FOREST = new NetherBiomeWrapper(new ResourceLocation("warped_forest"));
@@ -126,6 +126,7 @@ public class NetherBiomesRegistry {
 	}
 
 	public static void mapBiomes(Registry<Biome> biomeRegistry) {
+		GENERATOR.clear();
 		GENERATOR.addAll(REGISTRY.getValues());
 
 		MUTABLE.clear();
@@ -207,7 +208,7 @@ public class NetherBiomesRegistry {
 			ALL_BIOMES.add(biome);
 		}
 	}
-	
+
 	public static NetherBiome getBiome(Random random) {
 		float chance = random.nextFloat() * maxChance;
 		for (NetherBiome biome : GENERATOR)

@@ -15,11 +15,11 @@ import net.minecraft.world.gen.NoiseChunkGenerator;
 
 @Mixin(value = DimensionType.class, priority = 100)
 public class DimensionTypeMixin {
-	@Inject(method = "getNetherChunkGenerator", at = @At("HEAD"), cancellable = true)
+	@Inject(method = "getNetherChunkGenerator(Lnet/minecraft/util/registry/Registry;Lnet/minecraft/util/registry/Registry;J)Lnet/minecraft/world/gen/ChunkGenerator;", at = @At("HEAD"), cancellable = true)
 	private static void replaceGenerator(Registry<Biome> biomeRegistry, Registry<DimensionSettings> chunkGeneratorSettingsRegistry, long seed, CallbackInfoReturnable<ChunkGenerator> info) {
-		info.setReturnValue(new NoiseChunkGenerator(new NetherBiomeProvider(biomeRegistry, seed), seed, () -> {
-			return (DimensionSettings) chunkGeneratorSettingsRegistry.getOrThrow(DimensionSettings.field_242736_e);
-		}));
-		info.cancel();
+		info.setReturnValue(new NoiseChunkGenerator(
+				new NetherBiomeProvider(biomeRegistry, seed), seed,
+				() -> chunkGeneratorSettingsRegistry.getOrThrow(DimensionSettings.field_242736_e)));
+
 	}
 }
